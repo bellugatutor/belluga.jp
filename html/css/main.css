@@ -1,0 +1,9 @@
+.featureBox .sectionTitle {
+	background: url("../images/home/featurebox-icons.png") no-repeat scroll 50% 0 rgba(0, 0, 0, 0);
+}
+.carousel .pagerPrevious {
+    background-image: url("../images/icons/slider-arrow-left.png");
+}
+.carousel .pagerNext {
+    background-image: url("../images/icons/slider-arrow-left.png");
+}
