@@ -18,3 +18,51 @@
     height: 124px;
     margin: 20px 0 0;
 }
+.searchSort {
+    background: url("../images/pages/search/dropDownBg.gif") no-repeat scroll right center transparent;
+    float: right;
+    height: 26px;
+    margin: 1em 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 107px;
+}
+.srch .srch-opt-fld {
+    background: url("../images/pages/search/distanceBg.gif") no-repeat scroll left center transparent;
+    border: 1px solid #9db7cc;
+    border-radius: 3px;
+    height: 22px;
+    overflow: hidden;
+    padding-left: 3px;
+    width: 81px;
+}
+.srch .srch-opt-fld:hover {
+    background: url("../images/pages/search/distanceBgOn.gif") no-repeat scroll left center transparent;
+}
+.SimplePagerContainer .next {
+    background: url("../images/pages/search/nextPage.png") no-repeat scroll 50% 50% #fff;
+}
+.SimplePagerContainer .last {
+    background: url("../images/pages/search/lastPage.png") no-repeat scroll 50% 50% #fff;
+}
+.greenCheck li {
+    font-weight: 400;
+    line-height: 2em;
+    list-style-image: url("../images/HowItWorks/icon-check.png");
+    margin-bottom: 0.5em;
+}
+.bg-img-div.schedule {
+    background-image: url("../images/howitworks/icon-calendar.png");
+}
+.bg-img-div.reviews {
+    background-image: url("../images/howitworks/icon-student-reviews.png");
+}
+.bg-img-div.dollar {
+    background-image: url("../images/howitworks/icon-dollarsign.png");
+}
+.bg-img-div.graph {
+    background-image: url("../images/howitworks/icon-graph.png");
+}
+.bg-img-div.phone {
+    background-image: url("../images/howitworks/icon-customer-support.png");
+}

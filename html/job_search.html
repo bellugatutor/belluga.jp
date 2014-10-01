@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beluga Whale</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="Stylesheet" type="text/css" href="css/imports.css" />
+    <link rel="stylesheet" type="text/css" href="css/mvccommon.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/tutor-search.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+</head>
+<body>
+
+<div class="clearfix" id="SiteMaster_SiteHeader">
+    <div class="globalNav">
+		<div class="row">
+            <div class="globalNavToggle">
+            </div>
+			<ul class="globalNavMain reset">
+                <li class="phone">(877) 999-2681</li>
+                <li><a class="hide medium-show-inline-block" title="Tutor Sign-up" id="TutorSignupStartLink" href="#">BECOME A TUTOR</a></li>
+                <li id="studentSignupTest"><a title="Student Sign-up" href="#">BECOME A STUDENT</a></li>
+				<li class="hide medium-show-inline-block"><a href="#" class="loginout logIn ">Sign In</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" id="logoBar">
+		<div class="column large-4 small-7" id="LogoContainer">
+			<a title="Tutors, Tutoring Services, and Homework Help" href="/">
+			<img class="wyzAntLogo" alt="Tutors, Tutoring Services, and Homework Help" src="images/logo.png"><span class="divider"></span><img class="sectionLogo tutoring" alt="Tutoring" src="images/tutoring.png"></a>
+		</div>
+		<div class="column large-8 small-5" id="searchContainer">
+			<div class="subjectSearch hide medium-show-inline-block" id="HeaderSearch">
+				<span class="TutorCount">Search 99,999 tutors</span>
+				<div class="hide large-show-inline-block">
+					<span class="fieldSpan">
+						<label for="HeaderSearchSubject">Subject (ex: python)</label>
+						<input type="text" data-wyzac-selecteventhandler="doHeaderSearch" data-wyzac-searchtype="SubjectSearch" class="wyzAC SubjectTB ui-autocomplete-input" name="HeaderSearchSubject" id="HeaderSearchSubject" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+					</span>
+					<span class="fieldSpan">
+						<label for="HeaderSearchZip">Zip</label>
+						<input type="tel" value="10001" size="5" maxlength="5" class="ZipTB" name="HeaderSearchZip">
+					</span>
+					<a class="btn btn-lgt doSubjectSearch" href="#">FIND TUTORS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- header -->
+
+<div class="textAdjustmentNone siteNav" id="SiteMaster_SiteNav">
+	<div class="row">
+			<ul class="navTop toggle small-accordion NavAnon" id="NavTop">
+				<li class="signIn medium-hide MainNavButton">
+
+<a href="#" class="loginout logIn ">Sign In</a><div class="clearBoth"></div></li>
+				<li class="MainNavButton hide medium-show-inline-block"><a title="Tutors, Tutoring Services, and Homework Help" href="/">Home</a> </li>
+				<li class="hide medium-show-inline-block MainNavButton"><a href="#" title="Tutor Sign-up">Search</a> </li>
+
+				<li class="MainNavButton medium-hide"><a title="Tutor Sign-up" href="#">Become a tutor</a> </li>
+				<li class="MainNavButton medium-hide"><a title="Student Sign-up" href="#">Become a student</a> </li>
+
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Students</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Search for Tutors">Find a Tutor</a></li>
+						<li><a href="#" title="Request a Tutor">Request a Tutor</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Student Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Tutors</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Tutoring Jobs">Tutoring Jobs</a></li>
+						<li><a href="#" title="Become a Tutor">About Tutoring with Us</a></li>
+						<li><a href="#" title="Register to be a Tutor">Sign Up</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Tutor Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Resources</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Reviews">Reviews &amp; Testimonials</a></li>
+						<li><a href="#" title="College Scholarships">College Scholarships</a></li>
+						<li><a href="#" title="Resources">Resources</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">How It Works</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Student How it Works">For Students</a></li>
+						<li><a href="#" title="Tutor How it Works">For Tutors</a></li>
+						<li><a href="#" title="About">About</a></li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+</div> <!-- site nav -->
+
+<div class="row" id="wyzantResponsiveColumns">
+        <div class="column">
+		    <div id="ctl00_ctl00_PageCPH_PageHeadersPNL">
+	
+			    <div id="OneColumnMaster_PageHeaders">
+
+				    
+				    
+				    
+				    
+
+
+				    <span style="color:Red;" class="ValidationBox" id="ctl00_ctl00_PageCPH_TP4VS"><div style="color:Red;visibility:hidden;display:none;" class="ValidationBox" id="ctl00_ctl00_PageCPH_TP4VS_VS">
+
+	</div></span>
+				    <span style="color:Red;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary1"><div style="color:Red;visibility:hidden;display:none;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary1_VS">
+
+	</div></span>
+				    <span style="color:Red;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary2"><div style="color:Red;visibility:hidden;display:none;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary2_VS">
+
+	</div></span>
+				    <span style="color:Red;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary3"><div style="color:Red;visibility:hidden;display:none;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary3_VS">
+
+	</div></span>
+				    <span style="color:Red;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary4"><div style="color:Red;visibility:hidden;display:none;" class="ValidationBox" id="ctl00_ctl00_PageCPH_ValidationSummary4_VS">
+
+	</div></span>
+
+			    </div>
+		    
+</div>
+        </div>
+        
+
+        <div class="column large-3 medium-4">
+            
+
+<div class="srch srch-v srch-job">
+	<div class="srch-hdr">Search tutoring jobs</div>
+	
+	<div class="srch-opt srch-opt-selects categoryAndSubject" id="pnlSpecificSubject">
+	
+		<div>
+			<div id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchVertical1_AdvSubjectDropDown1_UpdatePanel1">
+		
+		<select class="safeEnterControl advSubjDD" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchVertical1_AdvSubjectDropDown1_DropDownListGroup" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$AdvSubjectDropDown1$DropDownListGroup\',\'\')', 0)" name="ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$AdvSubjectDropDown1$DropDownListGroup">
+			<option value="0" selected="selected">All Categories</option>
+			<option value="22">Most Popular</option>
+			<option value="6">Art</option>
+			<option value="15">Business</option>
+			<option value="10">Computer</option>
+			<option value="19">Corporate Training</option>
+			<option value="14">Elementary Education</option>
+			<option value="8">English</option>
+			<option value="12">History</option>
+			<option value="21">Homeschool</option>
+			<option value="11">Language</option>
+			<option value="3">Math</option>
+			<option value="5">Music</option>
+			<option value="4">Science</option>
+			<option value="13">Special Needs</option>
+			<option value="18">Sports/Recreation</option>
+			<option value="9">Test Preparation</option>
+
+		</select>
+		<select class="searchDDLBottom safeEnterControl advSubjDD" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchVertical1_AdvSubjectDropDown1_DropDownListSubject" name="ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$AdvSubjectDropDown1$DropDownListSubject">
+			<option value="0" selected="selected">All Subjects</option>
+			<option value="158">Accounting</option>
+			<option value="347">ACT English</option>
+			<option value="348">ACT Math</option>
+			<option value="346">ACT Reading</option>
+			<option value="349">ACT Science</option>
+			<option value="261">Actuarial Science</option>
+			<option value="262">ADD/ADHD</option>
+			<option value="155">Adobe Flash</option>
+			<option value="249">Adobe Illustrator</option>
+			<option value="263">Adobe InDesign</option>
+			<option value="359">Adobe Lightroom</option>
+			<option value="190">Adobe Photoshop</option>
+			<option value="343">AFOQT</option>
+			<option value="91">Algebra 1</option>
+			<option value="92">Algebra 2</option>
+			<option value="93">American History</option>
+			<option value="169">Anatomy</option>
+			<option value="264">Anthropology</option>
+			<option value="94">Arabic</option>
+			<option value="265">Archaeology</option>
+			<option value="354">Architecture</option>
+			<option value="266">Art History</option>
+			<option value="360">Art Theory </option>
+			<option value="182">ASP.NET</option>
+			<option value="267">Aspergers</option>
+			<option value="137">Astronomy</option>
+			<option value="248">ASVAB</option>
+			<option value="268">Autism</option>
+			<option value="257">AutoCAD</option>
+			<option value="269">Ballet</option>
+			<option value="139">Ballroom Dancing</option>
+			<option value="270">Bar Exam</option>
+			<option value="147">Baseball</option>
+			<option value="146">Basketball</option>
+			<option value="194">Bible Studies</option>
+			<option value="168">Biochemistry</option>
+			<option value="95">Biology</option>
+			<option value="271">Biostatistics</option>
+			<option value="161">Bodybuilding</option>
+			<option value="172">Botany</option>
+			<option value="337">Braille</option>
+			<option value="379">Bulgarian </option>
+			<option value="199">Business</option>
+			<option value="272">C</option>
+			<option value="339">C#</option>
+			<option value="235">C++</option>
+			<option value="96">Calculus</option>
+			<option value="259">Career Development</option>
+			<option value="273">CBEST</option>
+			<option value="177">Cello</option>
+			<option value="274">CFA</option>
+			<option value="328">Chemical Engineering</option>
+			<option value="97">Chemistry</option>
+			<option value="159">Chess</option>
+			<option value="133">Chinese</option>
+			<option value="331">Civil Engineering</option>
+			<option value="184">Clarinet</option>
+			<option value="353">Classics</option>
+			<option value="275">CLAST</option>
+			<option value="276">COBOL</option>
+			<option value="260">College Counseling</option>
+			<option value="99">Composition (Music)</option>
+			<option value="332">Computer Engineering</option>
+			<option value="277">Computer Programming</option>
+			<option value="278">Computer Science</option>
+			<option value="256">Cooking</option>
+			<option value="279">COOP/HSPT</option>
+			<option value="280">Cosmetology</option>
+			<option value="326">Criminal Justice</option>
+			<option value="166">Czech</option>
+			<option value="281">Dentistry</option>
+			<option value="282">Desktop Publishing</option>
+			<option value="196">Differential Equations</option>
+			<option value="195">Discrete Math</option>
+			<option value="283">DOS</option>
+			<option value="198">Drawing</option>
+			<option value="284">Dreamweaver</option>
+			<option value="201">Drums</option>
+			<option value="250">Dutch</option>
+			<option value="285">Dyslexia</option>
+			<option value="100">Ear Training</option>
+			<option value="286">Ecology</option>
+			<option value="287">Econometrics</option>
+			<option value="206">Economics</option>
+			<option value="329">Electrical Engineering</option>
+			<option value="101">Elementary (K-6th)</option>
+			<option value="357">Elementary Math</option>
+			<option value="358">Elementary Science</option>
+			<option value="149">English</option>
+			<option value="151">ESL/ESOL</option>
+			<option value="105">European History</option>
+			<option value="288">Farsi</option>
+			<option value="352">Film</option>
+			<option value="207">Finance</option>
+			<option value="376">Finite Math</option>
+			<option value="344">Fitness</option>
+			<option value="183">Flute</option>
+			<option value="145">Football</option>
+			<option value="289">Fortran</option>
+			<option value="106">French</option>
+			<option value="371">French Horn</option>
+			<option value="214">GED</option>
+			<option value="107">General Computer</option>
+			<option value="108">General Music</option>
+			<option value="290">Genetics</option>
+			<option value="143">Geography</option>
+			<option value="234">Geology</option>
+			<option value="109">Geometry</option>
+			<option value="110">German</option>
+			<option value="244">GMAT</option>
+			<option value="140">Golf</option>
+			<option value="152">Government &amp; Politics</option>
+			<option value="103">Grammar</option>
+			<option value="373">Graphic Design</option>
+			<option value="209">GRE</option>
+			<option value="221">Greek</option>
+			<option value="111">Guitar</option>
+			<option value="377">Handwriting</option>
+			<option value="291">Hard Of Hearing</option>
+			<option value="148">Hebrew</option>
+			<option value="292">Hindi</option>
+			<option value="156">HTML</option>
+			<option value="367">Hungarian</option>
+			<option value="374">IELTS</option>
+			<option value="341">Indonesian</option>
+			<option value="293">ISEE</option>
+			<option value="203">Italian</option>
+			<option value="163">Japanese</option>
+			<option value="144">Java</option>
+			<option value="368">JavaScript</option>
+			<option value="150">Korean</option>
+			<option value="351">Lacrosse</option>
+			<option value="120">Latin</option>
+			<option value="212">Law</option>
+			<option value="294">Linear Algebra</option>
+			<option value="295">Linux</option>
+			<option value="175">Literature</option>
+			<option value="296">Logic</option>
+			<option value="208">LSAT</option>
+			<option value="297">Macintosh</option>
+			<option value="298">Marketing</option>
+			<option value="241">Martial Arts</option>
+			<option value="334">Mathematica</option>
+			<option value="299">MATLAB</option>
+			<option value="258">Maya</option>
+			<option value="243">MCAT</option>
+			<option value="300">MCSA</option>
+			<option value="330">Mechanical Engineering</option>
+			<option value="369">Medical Coding</option>
+			<option value="301">Microbiology</option>
+			<option value="302">Microsoft Access</option>
+			<option value="104">Microsoft Excel</option>
+			<option value="303">Microsoft Outlook</option>
+			<option value="117">Microsoft PowerPoint</option>
+			<option value="355">Microsoft Project</option>
+			<option value="342">Microsoft Publisher</option>
+			<option value="304">Microsoft Windows</option>
+			<option value="112">Microsoft Word</option>
+			<option value="363">MTLE</option>
+			<option value="113">Music History</option>
+			<option value="365">Music Production</option>
+			<option value="128">Music Theory</option>
+			<option value="251">NCLEX</option>
+			<option value="340">Needlework</option>
+			<option value="188">Networking (Computer)</option>
+			<option value="225">Nursing</option>
+			<option value="338">Nutrition</option>
+			<option value="202">Oboe</option>
+			<option value="305">Oracle</option>
+			<option value="306">Organic Chemistry</option>
+			<option value="254">Painting</option>
+			<option value="307">Pascal</option>
+			<option value="308">Perl</option>
+			<option value="309">Pharmacology</option>
+			<option value="242">Philosophy</option>
+			<option value="114">Phonics</option>
+			<option value="237">Photography</option>
+			<option value="310">PHP</option>
+			<option value="220">Physical Science</option>
+			<option value="115">Physics</option>
+			<option value="170">Physiology</option>
+			<option value="116">Piano</option>
+			<option value="162">Poker</option>
+			<option value="223">Polish</option>
+			<option value="375">Political Science</option>
+			<option value="134">Portuguese</option>
+			<option value="311">Praxis</option>
+			<option value="118">Prealgebra</option>
+			<option value="119">Precalculus</option>
+			<option value="312">Probability</option>
+			<option value="210">Proofreading</option>
+			<option value="313">PSAT</option>
+			<option value="167">Psychology</option>
+			<option value="252">Public Speaking</option>
+			<option value="361">Python</option>
+			<option value="247">QuickBooks</option>
+			<option value="121">Reading</option>
+			<option value="314">Regents</option>
+			<option value="142">Religion</option>
+			<option value="315">Revit</option>
+			<option value="335">Romanian</option>
+			<option value="362">Ruby</option>
+			<option value="165">Russian</option>
+			<option value="255">Salsa Dancing</option>
+			<option value="245">SAS</option>
+			<option value="174">SAT Math</option>
+			<option value="217">SAT Reading</option>
+			<option value="218">SAT Writing</option>
+			<option value="178">Saxophone</option>
+			<option value="316">Series 63</option>
+			<option value="317">Series 7</option>
+			<option value="193">Sewing</option>
+			<option value="122">Sight Singing</option>
+			<option value="232">Sign Language</option>
+			<option value="135">Soccer</option>
+			<option value="327">Social Studies</option>
+			<option value="318">Sociology</option>
+			<option value="181">Softball</option>
+			<option value="319">SOL</option>
+			<option value="189">Songwriting</option>
+			<option value="124">Spanish</option>
+			<option value="141">Special Needs</option>
+			<option value="320">Speech</option>
+			<option value="345">Spelling</option>
+			<option value="216">SPSS</option>
+			<option value="191">SQL</option>
+			<option value="321">SSAT</option>
+			<option value="378">STAAR</option>
+			<option value="356">STATA</option>
+			<option value="138">Statistics</option>
+			<option value="125">Study Skills</option>
+			<option value="126">Swimming</option>
+			<option value="238">Table Tennis</option>
+			<option value="322">TAKS</option>
+			<option value="333">Tango</option>
+			<option value="336">Tax Preparation</option>
+			<option value="325">TEAS</option>
+			<option value="176">Tennis</option>
+			<option value="370">Thai</option>
+			<option value="127">Theatre</option>
+			<option value="239">TOEFL</option>
+			<option value="129">Track &amp; Field</option>
+			<option value="130">Trigonometry</option>
+			<option value="186">Trombone</option>
+			<option value="215">Trumpet</option>
+			<option value="204">Turkish</option>
+			<option value="323">UNIX</option>
+			<option value="197">Video Production</option>
+			<option value="364">Vietnamese</option>
+			<option value="154">Violin</option>
+			<option value="324">Visual Basic</option>
+			<option value="102">Vocabulary</option>
+			<option value="131">Voice (Music)</option>
+			<option value="200">Volleyball</option>
+			<option value="173">Water Polo</option>
+			<option value="157">Web Design</option>
+			<option value="179">World History</option>
+			<option value="132">Writing</option>
+			<option value="240">Yoga</option>
+			<option value="171">Zoology</option>
+
+		</select>
+	
+	</div>
+
+		</div>
+	
+</div>
+	
+		<div class="srch-row">
+			<div class="srch-opt-zip">
+			<div class="srch-opt-lbl">
+				Zip Code
+			</div>
+			<div class="srch-opt-zip">
+				<input type="tel" class="safeEnterControl" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchVertical1_ZipTB" size="5" maxlength="5" value="94305" name="ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$ZipTB">
+				
+			</div>
+		</div>
+		<div class="srch-opt-distance">
+			<div class="srch-opt-lbl">
+				Distance</div>
+			<div class="srch-opt-fld">
+				<select class="safeEnterControl" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchVertical1_DistanceDD_DropDownList1" name="ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$DistanceDD$DropDownList1">
+	<option value="1">1 mile</option>
+	<option value="2">2 miles</option>
+	<option value="5">5 miles</option>
+	<option value="10">10 miles</option>
+	<option value="15">15 miles</option>
+	<option value="20" selected="selected">20 miles</option>
+	<option value="25">25 miles</option>
+	<option value="30">30 miles</option>
+	<option value="35">35 miles</option>
+	<option value="40">40 miles</option>
+
+</select>
+
+			</div>
+		</div>
+		
+
+		</div>
+	
+	<div class="srch-row srch-row-bottom">
+		<a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchVertical1$JobVerticalSearchBTN','')" class="submitSearchButton btn btn-blue" id="JobVerticalSearchBTN">Search</a>
+	</div>
+	<div class="clearBoth">
+	</div>
+</div>
+
+            <div class="hide medium-show">
+                
+            </div>
+        </div>
+
+        <div class="column large-9 medium-8">
+            
+            
+            
+
+            <div id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_UPJobSearchResults">
+	
+		
+		<div class="header" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_SearchDetails">
+			<h1 class="left">
+				<span class="totalResults">697</span>
+				Tutoring jobs  in Stanford, CA
+			</h1>
+			<span class="searchSort spc-zero-n">
+				<select id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_SortDropDownList" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$SortDropDownList\',\'\')', 0)" name="ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$SortDropDownList">
+		<option value="7" selected="selected">Most Recent</option>
+		<option value="1">Distance</option>
+		<option value="6">Oldest</option>
+
+	</select>
+			</span>
+	<div class="clearBoth"></div>
+		</div>
+		<p class="InfoBox" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_InfoDiv">
+			You must <a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$LoginStatus1$ctl02','')" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_LoginStatus1">sign in</a>
+			to contact potential students. If you don't have an account, please <a href="#">register</a> to become a tutor.
+		</p>
+		
+		
+		<div class="searchResults">
+			
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl0_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl0_hlNotSignedIn">Statistics  Student in San Jose, CA 95129 12.0 mi</a>
+				</h4>
+				<p><br>We're looking for AP Chemistry and AP Statistics tutor for our son. </p>
+				
+                <div class="txt-lgt">
+                    - Posted by Aim, 40 minutes ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl1_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl1_hlNotSignedIn">Chemistry  Student in San Jose, CA 95129 12.0 mi</a>
+				</h4>
+				<p><br>We're looking for AP Chemistry and AP Statistics tutor for our son. </p>
+				
+                <div class="txt-lgt">
+                    - Posted by Aim, 40 minutes ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl2_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl2_hlNotSignedIn">Chemistry  Student in Santa Clara, CA 95050 12.8 mi</a>
+				</h4>
+				<p><br><br>I need some help in Chemistry ASAP.</p>
+				
+                <div class="txt-lgt">
+                    - Posted by Silke, 44 minutes ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl3_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl3_hlNotSignedIn">Spanish  Student in Fremont, CA 94536 14.2 mi</a>
+				</h4>
+				<p>I'm looking for a Spanish tutor for my 9-year-old daughter. </p>
+				
+                <div class="txt-lgt">
+                    - Posted by Maria, 1 hour ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl4_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl4_hlNotSignedIn">Computer Programming  Student in San Mateo, CA 94401 13.4 mi</a>
+				</h4>
+				<p>I am Spanish, and am seeking a computer programming tutor.</p>
+				
+                <div class="txt-lgt">
+                    - Posted by Judith, 2 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl5_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl5_hlNotSignedIn">Spanish  Student in San Mateo, CA 94401 13.4 mi</a>
+				</h4>
+				<p>I am Spanish, and am seeking a computer programming tutor.</p>
+				
+                <div class="txt-lgt">
+                    - Posted by Judith, 2 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl6_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl6_hlNotSignedIn">Computer Science  Student in Burlingame, CA 94010 15.2 mi</a>
+				</h4>
+				<p>We are looking for an AP computer science tutor for high school. </p>
+				
+                <div class="txt-lgt">
+                    - Posted by Randi, 2 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl7_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl7_hlNotSignedIn">Physics  Student in San Leandro, CA 94578 19.8 mi</a>
+				</h4>
+				<p>I am taking Physic 2A in a college. I hope I could find a tutor who can helps me deal with my HW, lab report and explains the concepts. </p>
+				
+                <div class="txt-lgt">
+                    - Posted by Iva, 2 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl8_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl8_hlNotSignedIn">Statistics  Student in El Granada, CA 94018 17.3 mi</a>
+				</h4>
+				<p>I am taking college stats and need some help.</p>
+				
+                <div class="txt-lgt">
+                    - Posted by Dr. Irwin, 2 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		<div class="jobResult">
+			<div class="floatRight rightJobResult">
+				
+				<a target="_self" href="#" class="btn" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl9_hlImageNotSignedIn">
+					View job
+				</a>
+			</div>
+			<div class="leftJobResult">
+				<h4 class="sendFollowup">
+					
+					
+					<a target="_self" href="#" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_JobList1_ListViewJobs_ctrl9_hlNotSignedIn">English  Student in Hayward, CA 94542 17.2 mi</a>
+				</h4>
+				<p><br>I am a college student and I am taking an online English class that I need help with.</p>
+				
+                <div class="txt-lgt">
+                    - Posted by Abdulaziz, 3 hours ago
+                </div>
+			</div>
+			<div class="ClearBoth"></div>
+		</div>
+	
+		</div>
+	
+
+	
+
+		<div class="searchDetails hide medium-show" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPagerView">
+			<div class="pager">
+				
+		<span class="SimplePagerContainer">
+			
+			
+			
+        <a class="aspNetDisabled CurrentPage SimplePagerLink pg " id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_ctrl0_SpecificPageBTN">1</a>
+	
+        <a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$ctrl1$SpecificPageBTN','')" class="SimplePagerLink pg" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_ctrl1_SpecificPageBTN">2</a>
+	
+        <a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$ctrl2$SpecificPageBTN','')" class="SimplePagerLink pg" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_ctrl2_SpecificPageBTN">3</a>
+	
+        <a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$ctrl3$SpecificPageBTN','')" class="SimplePagerLink pg" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_ctrl3_SpecificPageBTN">4</a>
+	
+        <a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$ctrl4$SpecificPageBTN','')" class="SimplePagerLink pg" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_ctrl4_SpecificPageBTN">5</a>
+	
+			<a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$NextPageBTN','')" class="SimplePagerLink pg next" title="next page" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_NextPageBTN"> </a>
+			<a href="javascript:__doPostBack('ctl00$ctl00$PageCPH$ResponsiveContent$JobSearchResults1$BottomPager$PagerLV$LastBTN','')" class="SimplePagerLink pg last" title="last page" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_BottomPager_PagerLV_LastBTN"> </a>			
+		</span>
+	
+
+			</div>
+			<a class="backTopLink" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_TopLink" href="javascript:scroll(0,0)">Back to top</a>
+		</div>
+	    <div class="medium-hide">
+			
+<div class="moreResultsLink">
+	<a href="#" data-wyz-total-results="697" data-wyz-result-container=".searchResults" id="ctl00_ctl00_PageCPH_ResponsiveContent_JobSearchResults1_MoreLink_Hyp1">More jobs...</a>
+</div>
+
+		</div>
+		
+	
+</div>
+
+            <div id="ctl00_ctl00_PageCPH_ResponsiveContent_LinkDiv">
+                <p>
+                    You may also view <a title="WyzAnt" href="http://www.indeed.com/q-Wyzant-Tutoring-jobs.html">WyzAnt jobs</a> at Indeed and <a title="WyzAnt" href="http://www.simplyhired.com/a/jobs/list/c-wyzant+tutoring">WyzAnt jobs</a> at Simply Hired.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+<div id="SiteMaster_PageFooter">
+    <div class="row">
+        <div class="large-4 large-push-8 medium-4 medium-push-8 columns small-12">
+ 
+            <div class="helpBox">
+                <h3>Need help finding a tutor?</h3>
+                <h4 class="icon phone">Call us (877) 999-2681</h4>
+                <a href="#" class="btn">Request a tutor</a>
+            </div>
+            
+            <div class="BBBVLogos hide medium-show">
+                    <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+                    <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+            </div>
+        </div>
+        
+        <div class="large-8 large-pull-4 medium-8 medium-pull-4 columns small-12">
+            <ul class="small-accordion topFooterLinks footerLinks row">
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Get to know us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Reviews &amp; Testimonials</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a target="_blank" href="https://www.zazzle.com/Belluga">Belluga Store</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Learn with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">Search for a Tutor</a></li>
+                        <li><a href="#">Request a Tutor</a></li>
+                        <li><a href="#">Math Help</a></li>
+                        <li><a href="#">Belluga Resources</a></li>
+                        <li><a href="#">Belluga Scholarships</a></li>
+                        <li><a href="#">Online Tutoring</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Work with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Tutoring with Us</a></li>
+                        <li><a href="#">Become a Tutor</a></li>
+                        <li><a href="#">Tutoring Jobs</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-12">
+                    <h5 class="accordion-trg">Connect with us</h5>
+                    <ul class="SubNav graphicLinks">
+                        <li class="large-12 medium-3 column"><a class="icon facebook" href="http://www.facebook.com/#" target="_blank" title="Belluga on Facebook">Facebook</a> </li>
+                        <li class="large-12 medium-3 column"><a class="icon twitter" href="http://www.twitter.com/#" target="_blank" title="Belluga on Twitter">Twitter</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon linkedIn" href="http://www.linkedin.com/company/#" target="_blank" title="Belluga on LinkedIn">LinkedIn</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon youtube" href="http://www.youtube.com/#" target="_blank" title="Belluga on YouTube">YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row hide medium-show">
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by location</h5></li>
+            </ul>
+            <ul class="row">
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Atlanta Tutoring">Atlanta Tutors</a>
+                    <a href="#" title="Boston Tutoring">Boston Tutors</a>
+                    <a href="#" title="Brooklyn Tutoring">Brooklyn Tutors</a>
+                    <a href="#" title="Chicago Tutoring">Chicago Tutors</a>
+                    <a href="#" title="Dallas Tutoring">Dallas Tutors</a>
+                    <a href="#" title="Denver Tutoring">Denver Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Detroit Tutoring">Detroit Tutors</a>
+                    <a href="#" title="Houston Tutoring">Houston Tutors</a>
+                    <a href="#" title="Los Angeles Tutoring">Los Angeles Tutors</a>
+                    <a href="#" title="Miami Tutoring">Miami Tutors</a>
+                    <a href="#" title="New York Tutoring">New York City Tutors</a>
+                    <a href="#" title="Orange County Tutoring">Orange County Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Philadelphia Tutoring">Philadelphia Tutors</a>
+                    <a href="#" title="Phoenix Tutoring">Phoenix Tutors</a>
+                    <a href="#" title="San Francisco Tutoring">San Francisco Tutors</a>
+                    <a href="#" title="Seattle Tutoring">Seattle Tutors</a>
+                    <a href="#" title="San Diego Tutoring">San Diego Tutors</a>
+                    <a href="#" title="Washington, DC Tutoring">Washington, DC Tutors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by Subject</h5></li>
+            </ul>
+            <ul class="row">
+                <li class="large-4 medium-4 column">
+                                            <a href="#" title="Algebra Tutoring">Algebra Tutors</a>
+                    <a href="#" title="Calculus Tutoring">Calculus Tutors</a>
+                    <a href="#" title="Chemistry Tutoring">Chemistry Tutors</a>
+                    <a href="#" title="Computer Lessons">Computer Lessons</a>
+                    <a href="#" title="Elementary Education Tutoring">Elementary Tutors</a>
+                    <a href="#" title="English Tutoring">English Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="Geometry Tutoring">Geometry Tutors</a>
+                    <a href="#" title="Language Tutoring">Language Tutors</a>
+                    <a href="#" title="Math Tutoring">Math Tutors</a>
+                    <a href="#" title="Music Lessons">Music Lessons</a>
+                    <a href="#" title="Physics Tutoring">Physics Tutors</a>
+                    <a href="#" title="Reading Tutoring">Reading Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="SAT Tutoring">SAT Tutors</a>
+                    <a href="#" title="Science Tutoring">Science Tutors</a>
+                    <a href="#" title="Spanish Tutoring">Spanish Tutors</a>
+                    <a href="#" title="Statistics Tutoring">Statistics Tutors</a>
+                    <a href="#" title="Test Preparation Tutoring">Test Prep Tutors</a>
+                    <a href="#" title="Writing Tutoring">Writing Tutors</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="BBBVLogos medium-hide">
+        <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+        <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+    </div>
+    <div class="clearBoth"></div>
+    <div class="row Copyright medium-text-left">
+        <div class="medium-7 columns TermsOfUse medium-push-5 medium-text-right">
+            <a href="#">Terms of Use</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Locations</a>
+       </div>
+        <div class="medium-5 columns medium-pull-7">
+            &copy; 2014 Belluga Tutoring All Rights Reserved
+        </div>
+    </div>	
+</div>
+
+</body>
+</html>
