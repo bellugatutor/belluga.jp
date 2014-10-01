@@ -52,17 +52,17 @@
     margin-bottom: 0.5em;
 }
 .bg-img-div.schedule {
-    background-image: url("../images/howitworks/icon-calendar.png");
+    background-image: url("../images/HowItWorks/icon-calendar.png");
 }
 .bg-img-div.reviews {
-    background-image: url("../images/howitworks/icon-student-reviews.png");
+    background-image: url("../images/HowItWorks/icon-student-reviews.png");
 }
 .bg-img-div.dollar {
-    background-image: url("../images/howitworks/icon-dollarsign.png");
+    background-image: url("../images/HowItWorks/icon-dollarsign.png");
 }
 .bg-img-div.graph {
-    background-image: url("../images/howitworks/icon-graph.png");
+    background-image: url("../images/HowItWorks/icon-graph.png");
 }
 .bg-img-div.phone {
-    background-image: url("../images/howitworks/icon-customer-support.png");
+    background-image: url("../images/HowItWorks/icon-customer-support.png");
 }
