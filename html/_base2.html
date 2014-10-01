@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beluga Whale</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="Stylesheet" type="text/css" href="css/imports.css" />
+    <link rel="stylesheet" type="text/css" href="css/mvccommon.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+</head>
+<body>
+
+<div class="clearfix" id="SiteMaster_SiteHeader">
+    <div class="globalNav">
+		<div class="row">
+            <div class="globalNavToggle">
+            </div>
+			<ul class="globalNavMain reset">
+                <li class="phone">(877) 999-2681</li>
+                <li><a class="hide medium-show-inline-block" title="Tutor Sign-up" id="TutorSignupStartLink" href="#">BECOME A TUTOR</a></li>
+                <li id="studentSignupTest"><a title="Student Sign-up" href="#">BECOME A STUDENT</a></li>
+				<li class="hide medium-show-inline-block"><a href="#" class="loginout logIn ">Sign In</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" id="logoBar">
+		<div class="column large-4 small-7" id="LogoContainer">
+			<a title="Tutors, Tutoring Services, and Homework Help" href="/">
+			<img class="wyzAntLogo" alt="Tutors, Tutoring Services, and Homework Help" src="images/logo.png"><span class="divider"></span><img class="sectionLogo tutoring" alt="Tutoring" src="images/tutoring.png"></a>
+		</div>
+		<div class="column large-8 small-5" id="searchContainer">
+			<div class="subjectSearch hide medium-show-inline-block" id="HeaderSearch">
+				<span class="TutorCount">Search 99,999 tutors</span>
+				<div class="hide large-show-inline-block">
+					<span class="fieldSpan">
+						<label for="HeaderSearchSubject">Subject (ex: python)</label>
+						<input type="text" data-wyzac-selecteventhandler="doHeaderSearch" data-wyzac-searchtype="SubjectSearch" class="wyzAC SubjectTB ui-autocomplete-input" name="HeaderSearchSubject" id="HeaderSearchSubject" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+					</span>
+					<span class="fieldSpan">
+						<label for="HeaderSearchZip">Zip</label>
+						<input type="tel" value="10001" size="5" maxlength="5" class="ZipTB" name="HeaderSearchZip">
+					</span>
+					<a class="btn btn-lgt doSubjectSearch" href="#">FIND TUTORS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- header -->
+
+<div class="textAdjustmentNone siteNav" id="SiteMaster_SiteNav">
+	<div class="row">
+			<ul class="navTop toggle small-accordion NavAnon" id="NavTop">
+				<li class="signIn medium-hide MainNavButton">
+
+<a href="#" class="loginout logIn ">Sign In</a><div class="clearBoth"></div></li>
+				<li class="MainNavButton hide medium-show-inline-block"><a title="Tutors, Tutoring Services, and Homework Help" href="/">Home</a> </li>
+				<li class="hide medium-show-inline-block MainNavButton"><a href="#" title="Tutor Sign-up">Search</a> </li>
+
+				<li class="MainNavButton medium-hide"><a title="Tutor Sign-up" href="#">Become a tutor</a> </li>
+				<li class="MainNavButton medium-hide"><a title="Student Sign-up" href="#">Become a student</a> </li>
+
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Students</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Search for Tutors">Find a Tutor</a></li>
+						<li><a href="#" title="Request a Tutor">Request a Tutor</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Student Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Tutors</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Tutoring Jobs">Tutoring Jobs</a></li>
+						<li><a href="#" title="Become a Tutor">About Tutoring with Us</a></li>
+						<li><a href="#" title="Register to be a Tutor">Sign Up</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Tutor Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Resources</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Reviews">Reviews &amp; Testimonials</a></li>
+						<li><a href="#" title="College Scholarships">College Scholarships</a></li>
+						<li><a href="#" title="Resources">Resources</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">How It Works</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Student How it Works">For Students</a></li>
+						<li><a href="#" title="Tutor How it Works">For Tutors</a></li>
+						<li><a href="#" title="About">About</a></li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+</div> <!-- site nav -->
+
+<div id="SiteMaster_PageFooter">
+    <div class="row">
+        <div class="large-4 large-push-8 medium-4 medium-push-8 columns small-12">
+ 
+            <div class="helpBox">
+                <h3>Need help finding a tutor?</h3>
+                <h4 class="icon phone">Call us (877) 999-2681</h4>
+                <a href="#" class="btn">Request a tutor</a>
+            </div>
+            
+            <div class="BBBVLogos hide medium-show">
+                    <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+                    <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+            </div>
+        </div>
+        
+        <div class="large-8 large-pull-4 medium-8 medium-pull-4 columns small-12">
+            <ul class="small-accordion topFooterLinks footerLinks row">
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Get to know us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Reviews &amp; Testimonials</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a target="_blank" href="https://www.zazzle.com/Belluga">Belluga Store</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Learn with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">Search for a Tutor</a></li>
+                        <li><a href="#">Request a Tutor</a></li>
+                        <li><a href="#">Math Help</a></li>
+                        <li><a href="#">Belluga Resources</a></li>
+                        <li><a href="#">Belluga Scholarships</a></li>
+                        <li><a href="#">Online Tutoring</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Work with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Tutoring with Us</a></li>
+                        <li><a href="#">Become a Tutor</a></li>
+                        <li><a href="#">Tutoring Jobs</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-12">
+                    <h5 class="accordion-trg">Connect with us</h5>
+                    <ul class="SubNav graphicLinks">
+                        <li class="large-12 medium-3 column"><a class="icon facebook" href="http://www.facebook.com/#" target="_blank" title="Belluga on Facebook">Facebook</a> </li>
+                        <li class="large-12 medium-3 column"><a class="icon twitter" href="http://www.twitter.com/#" target="_blank" title="Belluga on Twitter">Twitter</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon linkedIn" href="http://www.linkedin.com/company/#" target="_blank" title="Belluga on LinkedIn">LinkedIn</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon youtube" href="http://www.youtube.com/#" target="_blank" title="Belluga on YouTube">YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row hide medium-show">
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by location</h5></li>
+            </ul>
+            <ul class="row">
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Atlanta Tutoring">Atlanta Tutors</a>
+                    <a href="#" title="Boston Tutoring">Boston Tutors</a>
+                    <a href="#" title="Brooklyn Tutoring">Brooklyn Tutors</a>
+                    <a href="#" title="Chicago Tutoring">Chicago Tutors</a>
+                    <a href="#" title="Dallas Tutoring">Dallas Tutors</a>
+                    <a href="#" title="Denver Tutoring">Denver Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Detroit Tutoring">Detroit Tutors</a>
+                    <a href="#" title="Houston Tutoring">Houston Tutors</a>
+                    <a href="#" title="Los Angeles Tutoring">Los Angeles Tutors</a>
+                    <a href="#" title="Miami Tutoring">Miami Tutors</a>
+                    <a href="#" title="New York Tutoring">New York City Tutors</a>
+                    <a href="#" title="Orange County Tutoring">Orange County Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Philadelphia Tutoring">Philadelphia Tutors</a>
+                    <a href="#" title="Phoenix Tutoring">Phoenix Tutors</a>
+                    <a href="#" title="San Francisco Tutoring">San Francisco Tutors</a>
+                    <a href="#" title="Seattle Tutoring">Seattle Tutors</a>
+                    <a href="#" title="San Diego Tutoring">San Diego Tutors</a>
+                    <a href="#" title="Washington, DC Tutoring">Washington, DC Tutors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by Subject</h5></li>
+            </ul>
+            <ul class="row">
+                <li class="large-4 medium-4 column">
+                                            <a href="#" title="Algebra Tutoring">Algebra Tutors</a>
+                    <a href="#" title="Calculus Tutoring">Calculus Tutors</a>
+                    <a href="#" title="Chemistry Tutoring">Chemistry Tutors</a>
+                    <a href="#" title="Computer Lessons">Computer Lessons</a>
+                    <a href="#" title="Elementary Education Tutoring">Elementary Tutors</a>
+                    <a href="#" title="English Tutoring">English Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="Geometry Tutoring">Geometry Tutors</a>
+                    <a href="#" title="Language Tutoring">Language Tutors</a>
+                    <a href="#" title="Math Tutoring">Math Tutors</a>
+                    <a href="#" title="Music Lessons">Music Lessons</a>
+                    <a href="#" title="Physics Tutoring">Physics Tutors</a>
+                    <a href="#" title="Reading Tutoring">Reading Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="SAT Tutoring">SAT Tutors</a>
+                    <a href="#" title="Science Tutoring">Science Tutors</a>
+                    <a href="#" title="Spanish Tutoring">Spanish Tutors</a>
+                    <a href="#" title="Statistics Tutoring">Statistics Tutors</a>
+                    <a href="#" title="Test Preparation Tutoring">Test Prep Tutors</a>
+                    <a href="#" title="Writing Tutoring">Writing Tutors</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="BBBVLogos medium-hide">
+        <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+        <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+    </div>
+    <div class="clearBoth"></div>
+    <div class="row Copyright medium-text-left">
+        <div class="medium-7 columns TermsOfUse medium-push-5 medium-text-right">
+            <a href="#">Terms of Use</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Locations</a>
+       </div>
+        <div class="medium-5 columns medium-pull-7">
+            &copy; 2014 Belluga Tutoring All Rights Reserved
+        </div>
+    </div>	
+</div>
+
+</body>
+</html>

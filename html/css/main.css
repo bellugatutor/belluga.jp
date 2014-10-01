@@ -7,3 +7,14 @@
 .carousel .pagerNext {
     background-image: url("../images/icons/slider-arrow-left.png");
 }
+.displaySearchTestimonials .testimonial {
+    background: url("../images/pages/search/icons/quote.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-style: italic;
+    margin-top: 20px;
+    padding: 0 0 0 22px;
+}
+.siteStats {
+    background: url("../images/pages/search/stats-2014.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 124px;
+    margin: 20px 0 0;
+}

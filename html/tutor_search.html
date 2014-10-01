@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Beluga Whale</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="Stylesheet" type="text/css" href="css/imports.css" />
+    <link rel="stylesheet" type="text/css" href="css/mvccommon.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/form-search.css" />
+    <link rel="stylesheet" type="text/css" href="css/tutor-search.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+</head>
+<body>
+
+<div class="clearfix" id="SiteMaster_SiteHeader">
+    <div class="globalNav">
+		<div class="row">
+            <div class="globalNavToggle">
+            </div>
+			<ul class="globalNavMain reset">
+                <li class="phone">(877) 999-2681</li>
+                <li><a class="hide medium-show-inline-block" title="Tutor Sign-up" id="TutorSignupStartLink" href="#">BECOME A TUTOR</a></li>
+                <li id="studentSignupTest"><a title="Student Sign-up" href="#">BECOME A STUDENT</a></li>
+				<li class="hide medium-show-inline-block"><a href="#" class="loginout logIn ">Sign In</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row" id="logoBar">
+		<div class="column large-4 small-7" id="LogoContainer">
+			<a title="Tutors, Tutoring Services, and Homework Help" href="/">
+			<img class="wyzAntLogo" alt="Tutors, Tutoring Services, and Homework Help" src="images/logo.png"><span class="divider"></span><img class="sectionLogo tutoring" alt="Tutoring" src="images/tutoring.png"></a>
+		</div>
+		<div class="column large-8 small-5" id="searchContainer">
+			<div class="subjectSearch hide medium-show-inline-block" id="HeaderSearch">
+				<span class="TutorCount">Search 99,999 tutors</span>
+				<div class="hide large-show-inline-block">
+					<span class="fieldSpan">
+						<label for="HeaderSearchSubject">Subject (ex: python)</label>
+						<input type="text" data-wyzac-selecteventhandler="doHeaderSearch" data-wyzac-searchtype="SubjectSearch" class="wyzAC SubjectTB ui-autocomplete-input" name="HeaderSearchSubject" id="HeaderSearchSubject" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+					</span>
+					<span class="fieldSpan">
+						<label for="HeaderSearchZip">Zip</label>
+						<input type="tel" value="10001" size="5" maxlength="5" class="ZipTB" name="HeaderSearchZip">
+					</span>
+					<a class="btn btn-lgt doSubjectSearch" href="#">FIND TUTORS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- header -->
+
+<div class="textAdjustmentNone siteNav" id="SiteMaster_SiteNav">
+	<div class="row">
+			<ul class="navTop toggle small-accordion NavAnon" id="NavTop">
+				<li class="signIn medium-hide MainNavButton">
+
+<a href="#" class="loginout logIn ">Sign In</a><div class="clearBoth"></div></li>
+				<li class="MainNavButton hide medium-show-inline-block"><a title="Tutors, Tutoring Services, and Homework Help" href="/">Home</a> </li>
+				<li class="hide medium-show-inline-block MainNavButton"><a href="#" title="Tutor Sign-up">Search</a> </li>
+
+				<li class="MainNavButton medium-hide"><a title="Tutor Sign-up" href="#">Become a tutor</a> </li>
+				<li class="MainNavButton medium-hide"><a title="Student Sign-up" href="#">Become a student</a> </li>
+
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Students</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Search for Tutors">Find a Tutor</a></li>
+						<li><a href="#" title="Request a Tutor">Request a Tutor</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Student Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Tutors</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Tutoring Jobs">Tutoring Jobs</a></li>
+						<li><a href="#" title="Become a Tutor">About Tutoring with Us</a></li>
+						<li><a href="#" title="Register to be a Tutor">Sign Up</a></li>
+						<li><a href="#" title="Invite Friends">Invite Friends</a></li>
+						<li><a href="#" title="Tutor Help">Help</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">Resources</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Reviews">Reviews &amp; Testimonials</a></li>
+						<li><a href="#" title="College Scholarships">College Scholarships</a></li>
+						<li><a href="#" title="Resources">Resources</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav dropdown-trg hoverable MainNavButton">
+					<span class="accordion-trg dropdown-label">How It Works</span>
+					<ul class="SubNav">
+						<li><a href="#" title="Student How it Works">For Students</a></li>
+						<li><a href="#" title="Tutor How it Works">For Tutors</a></li>
+						<li><a href="#" title="About">About</a></li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+</div> <!-- site nav -->
+
+<div id="SiteMaster_PageMainContent">
+    <div class="Centered960">
+        <div class="" id="OneColumn">
+
+<div class="searchRight">
+	<div class="header noSubHeader" id="searchHeader">
+		<div class="searchTitle">
+			<h1>
+				<span class="totalResults">585</span> Stanford tutors
+			</h1>
+		</div>
+
+        <div data-wyz-replace-target="true" data-wyz-form-target=".searchRight" class="ajaxForm search-sort">
+            <form method="post" action="/tutorsearch" id="SearchSortForm">
+                <input type="hidden" value="1" name="pageNum">
+                Sort by:
+                <select name="sort" id="sort"><option value="14" selected="selected">Best Match</option>
+                <option value="5">Lowest Price</option>
+                <option value="4">Highest Price</option>
+                <option value="20">Rating</option>
+                <option value="1">Distance</option>
+                </select>
+            </form>
+        </div>
+		<div class="clearBoth"></div>
+	</div>
+	
+    <div class="results">
+		<div class="results">
+        <div class="searchResults">
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8070688, 76274947);" title="Palo Alto, CA  Tutor" href="#">
+							<img alt="Palo Alto, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/af1a8de5-f2c2-4263-b820-4bea2e250624.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 100 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours100.png">
+</div>
+
+						<div class="tutorDataRow price">$50/hour</div>
+
+						<div class="tutorStats">
+
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									7 testimonials
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:100.000000%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">48 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8070688, 76274947);" title="Palo Alto, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">2.8 miles,</span>
+
+							<span class="location">Palo Alto, CA <span class="zip">94306</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8070688, 76274947);" title="Palo Alto, CA Tutor" href="#">Akari M.</a></h4>
+
+						<h2>Native Japanese Tutor with Credentials</h2>
+
+						<div class="tutorFR">
+							Hello,
+
+I moved to the U.S. from Japan with my husband after completing graduate school in 2012. I obtained a certificate in Teaching Japanese as a Second Language. I love teaching and tutoring. I have also graduated from an American university, so English is not...
+							<a onclick="return recordClick(8070688, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 1 subject
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8189411, 76274947);" title="Palo Alto, CA  Tutor" href="#">
+							<img alt="Palo Alto, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/41a38952-e85e-4c3a-bf4e-ea6ea556d204.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 700 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours700.png">
+</div>
+
+						<div class="tutorDataRow price">$70/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									9 testimonials
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:99.758920%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">244 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8189411, 76274947);" title="Palo Alto, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">1.0 miles,</span>
+
+							<span class="location">Palo Alto, CA <span class="zip">94306</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8189411, 76274947);" title="Palo Alto, CA Tutor" href="#">Peter T.</a></h4>
+
+						<h2>Experienced, Patient Tutor: Pre-Algebra, Algebra, PreCalc, AP Calculus</h2>
+
+						<div class="tutorFR">
+							(I have limited weekday availability for students in Palo Alto and Los Altos)
+
+I have an MA in math from State University of New York and an MS in computers from Case Institute of Technology. Besides 25 years of software experience, I have taught part-time in the...
+							<a onclick="return recordClick(8189411, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 8 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8040094, 76274947);" title="Atherton, CA  Tutor" href="#">
+							<img alt="Atherton, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/22cae87c-5090-4c38-86c0-c48eee55c2e7.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 700 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours700.png">
+</div>
+
+						<div class="tutorDataRow price">$55/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									14 testimonials
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:99.686988%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">313 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8040094, 76274947);" title="Atherton, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">2.8 miles,</span>
+
+							<span class="location">Atherton, CA <span class="zip">94027</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8040094, 76274947);" title="Atherton, CA Tutor" href="#">Jacqueline G.</a></h4>
+
+						<h2>French Tutor for Middle, High School, and College Students</h2>
+
+						<div class="tutorFR">
+							Hi, I'm Jacqueline and I specialize in French tutoring for middle and high school students at all levels. I have taught over 35 French students and work with all of them to create a program tailored to their individual goals and needs. I can help you with all aspects...
+							<a onclick="return recordClick(8040094, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 4 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(7811012, 76274947);" title="Menlo Park, CA  Tutor" href="#">
+							<img alt="Menlo Park, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4109933f-e85e-4e4e-a74c-0ba41483c4da.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 1250 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours1250.png">
+</div>
+
+						<div class="tutorDataRow price">$95/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									4 testimonials
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:99.478640%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">564 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(7811012, 76274947);" title="Menlo Park, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">1.7 miles,</span>
+
+							<span class="location">Menlo Park, CA <span class="zip">94025</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(7811012, 76274947);" title="Menlo Park, CA Tutor" href="#">Bridget K.</a></h4>
+
+						<h2>Certified Teacher</h2>
+
+						<div class="tutorFR">
+							Hello! I am a certified K-12 Spanish teacher with more than 9 years of experience working with students and I have been a professional tutor for the last 5 years. I have been studying Spanish for 14 years, and I studied abroad in Spain and in Ecuador for a semester...
+							<a onclick="return recordClick(7811012, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 15 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8294540, 76274947);" title="Stanford, CA  Tutor" href="#">
+							<img alt="Stanford, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/faf4d606-438f-46d3-b640-fd02288ade2f.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 200 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours200.png">
+</div>
+
+						<div class="tutorDataRow price">$120/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									2 testimonials
+								</a>
+
+	<span title="4.9 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:98.432000%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">50 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8294540, 76274947);" title="Stanford, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">0.1 miles,</span>
+
+							<span class="location">Stanford, CA <span class="zip">94305</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8294540, 76274947);" title="Stanford, CA Tutor" href="#">Leon Z.</a></h4>
+
+						<h2>Physics, Math -- Improve your scores greatly, quickly, and pleasantly!</h2>
+
+						<div class="tutorFR">
+							I am an experienced tutor from the most prestigious tutoring companies in the Bay Area, and I taught physics for years in universities. My tutoring focuses on physics, high-level math such as calculus, and test prep. Most of my students are high school juniors, seniors,...
+							<a onclick="return recordClick(8294540, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 9 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8154435, 76274947);" title="Redwood City, CA  Tutor" href="#">
+							<img alt="Redwood City, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/4dbaf766-6112-406d-b7a4-9db0606a3978.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 200 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours200.png">
+</div>
+
+						<div class="tutorDataRow price">$60/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									11 testimonials
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:99.641516%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">164 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8154435, 76274947);" title="Redwood City, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">5.1 miles,</span>
+
+							<span class="location">Redwood City, CA <span class="zip">94063</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8154435, 76274947);" title="Redwood City, CA Tutor" href="#">Camille D.</a></h4>
+
+						<h2>Need A Native French Tutor?</h2>
+
+						<div class="tutorFR">
+							My name is Camille I’m 26 years old and have 3 years of experience tutoring French. I have worked with over 30 students at all levels. Whether it is to learn the basics of the language for a trip to France, grammar, or even perfecting your accent (phonetics), I can...
+							<a onclick="return recordClick(8154435, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 3 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8327060, 76274947);" title="Palo Alto, CA  Tutor" href="#">
+							<img alt="Palo Alto, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/6ac6e00f-b3ef-4087-967b-3f6320d4e4c9.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 500 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours500.png">
+</div>
+
+						<div class="tutorDataRow price">$70/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									3 testimonials
+								</a>
+
+	<span title="4.9 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:98.994912%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">156 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8327060, 76274947);" title="Palo Alto, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">2.3 miles,</span>
+
+							<span class="location">Palo Alto, CA <span class="zip">94303</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8327060, 76274947);" title="Palo Alto, CA Tutor" href="#">Anna M.</a></h4>
+
+						<h2>Credentialed chemistry teacher with industry and research experience</h2>
+
+						<div class="tutorFR">
+							The most important thing which I learned throughout the process of obtaining my teaching credential and Master of Arts in Education degree was this: Learning should be fun. 
+
+Too often, bright and curious elementary-school students advance to middle school and discover...
+							<a onclick="return recordClick(8327060, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 7 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(7651114, 76274947);" title="Mountain View, CA  Tutor" href="#">
+							<img alt="Mountain View, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/fc0cfa84-a601-48fc-84b9-82792b3f590f.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 1000 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours1000.png">
+</div>
+
+						<div class="tutorDataRow price">$63/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									15 testimonials
+								</a>
+
+	<span title="4.8 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:96.340484%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">316 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(7651114, 76274947);" title="Mountain View, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">5.0 miles,</span>
+
+							<span class="location">Mountain View, CA <span class="zip">94043</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(7651114, 76274947);" title="Mountain View, CA Tutor" href="#">Sharon G.</a></h4>
+
+						<h2>English Language Communication Coach for Business and Everyday Life</h2>
+
+						<div class="tutorFR">
+							Whether you are an individual or part of a group I customize my lessons to ensure what you learn is most important to your success in your work and everyday life.
+
+I work one-on-one or with groups of business professionals from all over the world to improve their...
+							<a onclick="return recordClick(7651114, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 8 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8139436, 76274947);" title="Mountain View, CA  Tutor" href="#">
+							<img alt="Mountain View, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/f9ed0993-2a7e-4c78-9182-1e45e5ea3abb.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 200 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours200.png">
+</div>
+
+						<div class="tutorDataRow price">$60/hour</div>
+
+						<div class="tutorStats">
+
+
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:99.337912%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">148 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8139436, 76274947);" title="Mountain View, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">4.3 miles,</span>
+
+							<span class="location">Mountain View, CA <span class="zip">94043</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8139436, 76274947);" title="Mountain View, CA Tutor" href="#">Ellen M.</a></h4>
+
+						<h2>English Tutor</h2>
+
+						<div class="tutorFR">
+							I have taught for 15 years, in the classroom, and one-on-one.  My students have ranged in age from 18 - 80 plus, and come from all over the world: Japan, Mexico, Korea, Russia, France, Eastern Europe, the Middle East, China, and many other countries.  At the present...
+							<a onclick="return recordClick(8139436, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 15 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+			<div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" onclick="return recordClick(8425537, 76274947);" title="Mountain View, CA  Tutor" href="#">
+							<img alt="Mountain View, CA Tutoring" src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/93c64eef-f3b4-4489-a81a-023ac90a9e30.jpg">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+	<img alt="Over 50 tutoring hours" class="TutorBadge" src="images/HourBadges/38x38/hours50.png">
+</div>
+
+						<div class="tutorDataRow price">$60/hour</div>
+
+						<div class="tutorStats">
+
+								<a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">Background checked</a>
+
+								<a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+									1 testimonial
+								</a>
+
+	<span title="5.0 of 5 stars" class="stars"><a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget"><span class="starsempty"><span style="width:100.000000%;" class="starsfull">&nbsp;</span></span>
+        <span class="starsdesc">3 ratings</span>
+</a></span>
+
+						</div>
+						<div class="tutorLinkRow">
+							<a onclick="return recordClick(8425537, 76274947);" title="Mountain View, CA Tutor" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+								<span class="miles">6.1 miles,</span>
+
+							<span class="location">Mountain View, CA <span class="zip">94040</span></span>
+						</div>
+
+						<h4><a onclick="return recordClick(8425537, 76274947);" title="Mountain View, CA Tutor" href="#">RIC  F.</a></h4>
+
+						<h2>Music Industry Veteran, Professional Trombone Instructor</h2>
+
+						<div class="tutorFR">
+							Hello-
+
+My name is Ric, and I'm a professional trombone player, singer, writer and arranger for over 30 years. I have extensive music industry experience. In August 1992, I performed with Billy Joel, Foreigner, Paul Simon. In December 1993, I recorded &amp; performed...
+							<a onclick="return recordClick(8425537, 76274947);" href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            
+	 Offering 5 subjects
+
+
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div>
+	</div>
+
+		</div>
+	<div class="ajaxTarget">
+		<div class="moreResultsLink medium-hide">
+			<a class="ajaxLink wyzAjaxRegistered" href="#">More tutors...</a>
+		</div>
+	</div>
+
+			<div class="searchDetails bottomPager hide medium-show">
+				<div class="pager">
+	<span class="SimplePagerContainer">
+	
+		 
+			 <a href="#" data-page-size="10" data-page-num="1" class="SimplePagerLink pg aspNetDisabled CurrentPage">1</a>
+			 <a href="#" data-page-size="10" data-page-num="2" class="SimplePagerLink pg">2</a>
+			 <a href="#" data-page-size="10" data-page-num="3" class="SimplePagerLink pg">3</a>
+			 <a href="#" data-page-size="10" data-page-num="4" class="SimplePagerLink pg">4</a>
+			 <a href="#" data-page-size="10" data-page-num="5" class="SimplePagerLink pg">5</a>
+					 <a href="#" data-page-size="10" data-page-num="2" class="SimplePagerLink pg next">next</a>
+
+
+	</span>
+
+
+</div>
+				<a href="javascript:scroll(0,0)" class="backTopLink">Back to top</a>
+			</div>
+
+</div>
+</div>
+
+	<div class="verticalSearch row">
+		
+
+
+<form method="get" class="search-box" action="/TutorSearch">	<fieldset class="responsiveTable">
+		<div class="search-hdr">Search For Tutors</div>
+
+		<div class="row">
+			<div class="column">
+				<label for="kw">Subject</label>
+				<input type="text" value="" name="kw" id="kw" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+				<span data-valmsg-replace="true" data-valmsg-for="kw" class="field-validation-valid"></span>
+			</div>
+		</div>
+
+
+		<div class="row not-for-online ">
+			<div class="columns small-6">
+				<label for="z">ZIP code</label>
+				<input type="tel" value="94305" name="z" maxlength="5" id="z" data-val-regex-pattern="^(\s*\d{5}\s*)?$" data-val-regex="Please enter a valid zip code." data-val="true" class="zip-input safeEnterControl">
+				<span data-valmsg-replace="true" data-valmsg-for="z" class="field-validation-valid"></span>
+			</div>
+
+			<div class="columns small-6 srch-opt-distance last">
+				<label for="d">Distance</label>
+				<select name="d" id="d">
+						<option value="1">1 mile</option>
+						<option value="2">2 miles</option>
+						<option value="5">5 miles</option>
+						<option value="10">10 miles</option>
+						<option value="15">15 miles</option>
+						<option selected="selected" value="20">20 miles</option>
+						<option value="25">25 miles</option>
+						<option value="30">30 miles</option>
+						<option value="35">35 miles</option>
+						<option value="40">40 miles</option>
+				</select>
+			</div>
+		</div>
+
+			<div class="advanced-options hide">
+				<div class="row">
+					<div class="column">
+						<label for="kw2">Subject 2</label>
+						<input type="text" value="" name="kw2" id="kw2" disabled="disabled" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+						<span data-valmsg-replace="true" data-valmsg-for="kw2" class="field-validation-valid"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column">
+						<label for="kw3">Subject 3</label>
+						<input type="text" value="" name="kw3" id="kw3" disabled="disabled" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+						<span data-valmsg-replace="true" data-valmsg-for="kw3" class="field-validation-valid"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="column">
+						<label>Hourly rate</label>
+					</div>
+						<div data-max="200" data-min="10" class="columns small-6 end text-left slider-bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
+						<div class="columns small-5 slider-inputs">
+							$<span class="min-text">10</span> to $<span class="max-text">200</span>
+							<input type="hidden" value="10" name="minh" id="minh" disabled="disabled" data-val-range-min="10" data-val-range-max="200" data-val-range="The field Minimum hourly rate must be between 10 and 200." data-val-number="The field Minimum hourly rate must be a number." data-val="true">
+							<input type="hidden" value="200" name="maxh" id="maxh" disabled="disabled" data-val-range-min="10" data-val-range-max="200" data-val-range="The field Maximum hourly rate must be between 10 and 200." data-val-number="The field Maximum hourly rate must be a number." data-val="true">
+						</div>
+				</div>
+
+				<div class="row">
+					<div class="column">
+						<label>Age</label>
+					</div>
+						<div data-max="100" data-min="18" class="columns small-6 end text-left slider-bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
+						<div class="columns small-5 slider-inputs">
+							<span class="min-text">18</span> to <span class="max-text">100</span>
+							<input type="hidden" value="18" name="mina" id="mina" disabled="disabled" data-val-range-min="18" data-val-range-max="100" data-val-range="The field Minimum age must be between 18 and 100." data-val-number="The field Minimum age must be a number." data-val="true">
+							<input type="hidden" value="100" name="maxa" id="maxa" disabled="disabled" data-val-range-min="18" data-val-range-max="100" data-val-range="The field Maximum age must be between 18 and 100." data-val-number="The field Maximum age must be a number." data-val="true">
+						</div>
+				</div>
+
+				<div class="row">
+					<div class="column">
+						<label for="im">Gender</label>
+						<select disabled="disabled" name="im" id="im">
+
+								<option selected="selected" value="-1">No Preference</option>
+								<option value="0">Female</option>
+								<option value="1">Male</option>
+						</select>
+						<span data-valmsg-replace="true" data-valmsg-for="im" class="field-validation-valid"></span>
+					</div>
+				</div>
+
+				<div class="row spc-sm">
+					<div class="column">
+						<input type="checkbox" disabled="disabled" value="true" name="bgCheck" id="bgCheck">
+						
+						<label for="bgCheck">Background check on file</label>
+					</div>
+				</div>
+			</div>
+
+		<div class="row">
+			<div class="columns small-6 large-5">
+				<button class="btn btn-blue" type="submit">Search</button>
+			</div>
+			<div class="columns small-6 large-7">
+					<a class="search-expand-link">Advanced search <b>+</b></a>
+			</div>
+		</div>
+	</fieldset>
+</form>
+	<div class="search-box medium-hide">
+		<h3>Need Help Finding a Tutor?</h3>
+		Call us at <b>(877) 999-2681</b> or
+		<a class="nowrap" href="#">request a tutor</a>.
+	</div>
+
+	<div class="siteStats hide medium-show">
+		<div>
+			<span class="stat">73,199</span>
+		</div>
+	</div>
+
+	<div class="searchSideContent hide medium-show">
+		<div class="guarantee">
+			<span id="sideguarantee"><img alt="good fit guarantee" src="images/pages/search/goodFitMessage.png"></span>
+		</div>
+	</div>
+
+
+		<div class="hide medium-show">
+				<div class="displaySearchTestimonials">
+			<div class="testimonial">
+				<img alt="" src="images/testimonials/location-CA-2.png">
+			</div> 
+			<div class="testimonial">
+				<img alt="" src="images/testimonials/subject-science-3.png">
+			</div> 
+			<div class="testimonial">
+				<img alt="" src="images/testimonials/pricing-6.png">
+			</div> 
+			<div class="testimonial">
+				<img alt="" src="images/testimonials/safety-4.png">
+			</div> 
+	</div>
+	<p><img src="images/pages/search/featuredIn.png"></p>
+
+		</div>
+	</div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+<div id="SiteMaster_PageFooter">
+    <div class="row">
+        <div class="large-4 large-push-8 medium-4 medium-push-8 columns small-12">
+ 
+            <div class="helpBox">
+                <h3>Need help finding a tutor?</h3>
+                <h4 class="icon phone">Call us (877) 999-2681</h4>
+                <a href="#" class="btn">Request a tutor</a>
+            </div>
+            
+            <div class="BBBVLogos hide medium-show">
+                    <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+                    <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+            </div>
+        </div>
+        
+        <div class="large-8 large-pull-4 medium-8 medium-pull-4 columns small-12">
+            <ul class="small-accordion topFooterLinks footerLinks row">
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Get to know us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Reviews &amp; Testimonials</a></li>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a target="_blank" href="https://www.zazzle.com/Belluga">Belluga Store</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Learn with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">Search for a Tutor</a></li>
+                        <li><a href="#">Request a Tutor</a></li>
+                        <li><a href="#">Math Help</a></li>
+                        <li><a href="#">Belluga Resources</a></li>
+                        <li><a href="#">Belluga Scholarships</a></li>
+                        <li><a href="#">Online Tutoring</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-4">
+                    <h5 class="accordion-trg">Work with us</h5>
+                    <ul class="SubNav">
+                        <li><a href="#">About Tutoring with Us</a></li>
+                        <li><a href="#">Become a Tutor</a></li>
+                        <li><a href="#">Tutoring Jobs</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </li>
+                <li class="has-subnav large-3 column medium-12">
+                    <h5 class="accordion-trg">Connect with us</h5>
+                    <ul class="SubNav graphicLinks">
+                        <li class="large-12 medium-3 column"><a class="icon facebook" href="http://www.facebook.com/#" target="_blank" title="Belluga on Facebook">Facebook</a> </li>
+                        <li class="large-12 medium-3 column"><a class="icon twitter" href="http://www.twitter.com/#" target="_blank" title="Belluga on Twitter">Twitter</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon linkedIn" href="http://www.linkedin.com/company/#" target="_blank" title="Belluga on LinkedIn">LinkedIn</a></li>
+                        <li class="large-12 medium-3 column"><a class="icon youtube" href="http://www.youtube.com/#" target="_blank" title="Belluga on YouTube">YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row hide medium-show">
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by location</h5></li>
+            </ul>
+            <ul class="row">
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Atlanta Tutoring">Atlanta Tutors</a>
+                    <a href="#" title="Boston Tutoring">Boston Tutors</a>
+                    <a href="#" title="Brooklyn Tutoring">Brooklyn Tutors</a>
+                    <a href="#" title="Chicago Tutoring">Chicago Tutors</a>
+                    <a href="#" title="Dallas Tutoring">Dallas Tutors</a>
+                    <a href="#" title="Denver Tutoring">Denver Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Detroit Tutoring">Detroit Tutors</a>
+                    <a href="#" title="Houston Tutoring">Houston Tutors</a>
+                    <a href="#" title="Los Angeles Tutoring">Los Angeles Tutors</a>
+                    <a href="#" title="Miami Tutoring">Miami Tutors</a>
+                    <a href="#" title="New York Tutoring">New York City Tutors</a>
+                    <a href="#" title="Orange County Tutoring">Orange County Tutors</a>
+                </li>
+
+                                    <li class="large-4 medium-4 column">
+                    <a href="#" title="Philadelphia Tutoring">Philadelphia Tutors</a>
+                    <a href="#" title="Phoenix Tutoring">Phoenix Tutors</a>
+                    <a href="#" title="San Francisco Tutoring">San Francisco Tutors</a>
+                    <a href="#" title="Seattle Tutoring">Seattle Tutors</a>
+                    <a href="#" title="San Diego Tutoring">San Diego Tutors</a>
+                    <a href="#" title="Washington, DC Tutoring">Washington, DC Tutors</a>
+                </li>
+            </ul>
+        </div>
+        <div class="large-6 medium-8 columns footerLinks left">
+            <ul class="row">
+                <li class="column"><h5>Tutors by Subject</h5></li>
+            </ul>
+            <ul class="row">
+                <li class="large-4 medium-4 column">
+                                            <a href="#" title="Algebra Tutoring">Algebra Tutors</a>
+                    <a href="#" title="Calculus Tutoring">Calculus Tutors</a>
+                    <a href="#" title="Chemistry Tutoring">Chemistry Tutors</a>
+                    <a href="#" title="Computer Lessons">Computer Lessons</a>
+                    <a href="#" title="Elementary Education Tutoring">Elementary Tutors</a>
+                    <a href="#" title="English Tutoring">English Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="Geometry Tutoring">Geometry Tutors</a>
+                    <a href="#" title="Language Tutoring">Language Tutors</a>
+                    <a href="#" title="Math Tutoring">Math Tutors</a>
+                    <a href="#" title="Music Lessons">Music Lessons</a>
+                    <a href="#" title="Physics Tutoring">Physics Tutors</a>
+                    <a href="#" title="Reading Tutoring">Reading Tutors</a>
+                </li>
+                <li class="large-4 medium-4 column">
+                    <a href="#" title="SAT Tutoring">SAT Tutors</a>
+                    <a href="#" title="Science Tutoring">Science Tutors</a>
+                    <a href="#" title="Spanish Tutoring">Spanish Tutors</a>
+                    <a href="#" title="Statistics Tutoring">Statistics Tutors</a>
+                    <a href="#" title="Test Preparation Tutoring">Test Prep Tutors</a>
+                    <a href="#" title="Writing Tutoring">Writing Tutors</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="BBBVLogos medium-hide">
+        <a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"><img src="images/home/bbb-logo-tutoring.png"></a>
+        <a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.Belluga.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"><img src="images/home/verisign-logo-tutoring.png"></a>
+    </div>
+    <div class="clearBoth"></div>
+    <div class="row Copyright medium-text-left">
+        <div class="medium-7 columns TermsOfUse medium-push-5 medium-text-right">
+            <a href="#">Terms of Use</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Locations</a>
+       </div>
+        <div class="medium-5 columns medium-pull-7">
+            &copy; 2014 Belluga Tutoring All Rights Reserved
+        </div>
+    </div>	
+</div>
+
+</body>
+</html>
