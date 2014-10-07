@@ -1,0 +1,435 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+
+<script type="text/javascript">
+    $(function(){var a=$(".carousel"),f=a.filter(".studentReviewBox-review"),g=a.filter(".adwordsCarousel"),c=a.filter(".tutorReviewBox-review"),e,i,d=function(b){var a=[];b.each(function(){if(typeof this.carousel!=="undefined"&&typeof this.carousel.slides!=="undefined")a=a.concat(this.carousel.slides.get())});return $(a)},b=function(b,c){var a=0;c.each(function(){var b=$(this).outerHeight();a=b>a?b:a});b.css({height:a})},h=function(b,c){var a=0;if(b.hasClass("pagerPrevious")===true)a=-1;else if(b.hasClass("pagerNext")===true)a=1;c.carousel("change",{direction:a})};$(window).resize(function(){clearTimeout(i);i=setTimeout(function(){b(f,e);b(c,d(c))},50)});a.on("click",".controls a",function(b){b.preventDefault();var a=$(this);h(a,a.parents(".carousel"))});$(".control").on("click",function(b){b.preventDefault();var a=$(this);h(a,a.siblings(".carousel"))});a.not(".adwordsCarousel").carousel({exclude:".controls"});g.carousel({exclude:".controls",slidesInView:2});g.length>0&&$("body").hasClass("oldIE")===true&&g.find(".pagerItem:nth-child(2)").css({left:"50%"});e=d(f);b(f,e);b(c,d(c))});
+</script>
+{% endblock %}
+
+{% block content %}
+
+
+<div id="homeBanner" class="banner">
+    <div class="row">
+        <div class="shadowBox medium-centered small-centered columns">
+            <h1>Belluga helps you find expert tutors at affordable prices</h1>
+            <h2>Search for and hire your perfect private tutor today</h2>
+            <form id="bannerSubjectSearch" class="contentSubjectSearch subjectSearch" method="get" action="">
+                <input type="hidden" value="20" name="d">
+                <div class="fieldSpan">
+                    <label for="txtBannerSubjectSearch">Subject</label>
+                    <input type="text" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl SubjectTB formSubmit ui-autocomplete-input" name="kw" size="33" id="txtBannerSubjectSearch" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                </div>
+                <div class="fieldSpan">
+                    <label class="ZipLbl" for="txtBannerZipSearch">Zip</label>
+                    <input type="tel" class="ZipTB formSubmit" value="10001" size="5" maxlength="5" name="z" id="txtBannerZipSearch">
+                </div>
+                <button id="btnBannerSearch" class="btn doSubjectSearch" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div> <!-- home banner -->
+
+
+<div class="contentGrid">
+    <div class="content">
+        <div class="stripe seoRow hide large-show">
+            <div class="row pad-zero">
+                <div class="siteNav">
+
+                    <div class="navTop" id="SubjectMenu">
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_MathButton">
+                                <a class="dropdown-label" href="#" title="Math Tutoring">Math Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="Algebra 1 Tutoring">Algebra 1 Tutors</a></div>
+                                    <div><a href="#" title="Algebra 2 Tutoring">Algebra 2 Tutors</a></div>
+                                    <div><a href="#" title="Calculus  Tutoring">Calculus Tutors</a></div>
+                                    <div><a href="#" title="Geometry Tutoring">Geometry Tutors</a></div>
+                                    <div><a href="#" title="Statistics Tutoring">Statistics Tutors</a></div>
+                                    <div class="moredivnk"><a href="#" title="Math Tutoring">More Math Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_ScienceButton"><a class="dropdown-label" href="#" title="Science Tutoring">Science Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="Chemistry Tutoring">Chemistry Tutors</a></div>
+                                    <div><a href="#" title="Physics Tutocring">Physics Tutors</a></div>
+                                    <div><a href="#" title="Biology Tutoring">Biology Tutors</a></div>
+                                    <div><a href="#" title="Psychology Tutoring">Psychology Tutors</a></div>
+                                    <div><a href="#" title="Anatomy Tutoring">Anatomy Tutors</a></div>
+                                    <div class="moredivnk"><a href="#" title="Science Tutoring">More Science Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_EnglishButton"><a class="dropdown-label" href="#" title="English Tutoring">English Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="Reading Tutoring">Reading Tutors</a></div>
+                                    <div><a href="#" title="Writing Tutoring">Writing Tutors</a></div>
+                                    <div><a href="#" title="Grammar Tutoring">Grammar Tutors</a></div>
+                                    <div><a href="#" title="ESL Tutoring">ESL Tutors</a></div>
+                                    <div><a href="#" title="Study Skills Tutoring">Study Skills Tutors</a></div>
+                                    <div class="moredivnk"><a href="#" title="English Tutoring">More English Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_LanguageButton"><a class="dropdown-label" href="#" title="Language Tutoring">Language Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="Spanish Tutoring">Spanish Tutors</a></div>
+                                    <div><a href="#" title="French Tutoring">French Tutors</a></div>
+                                    <div><a href="#" title="Japanese Tutoring">Japanese Tutors</a></div>
+                                    <div><a href="#" title="German Tutoring">German Tutors</a></div>
+                                    <div><a href="#" title="Latin Tutoring">Latin Tutors</a></div>
+                                    <div class="moredivnk"><a href="#" title="Language Tutoring">More Language Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_TestPrepButton"><a class="dropdown-label" href="#" title="Test Preparation Tutoring">Test Prep Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="SAT Tutoring">SAT Tutors</a></div>
+                                    <div><a href="#" title="ACT Tutoring">ACT Tutors</a></div>
+                                    <div><a href="#" title="GRE Tutoring">GRE Tutors</a></div>
+                                    <div><a href="#" title="GED Tutoring">GED Tutors</a></div>
+                                    <div><a href="#" title="ASVAB Tutoring">ASVAB Tutors</a></div>
+                                    <div class="moredivnk"> <a href="#" title="Test Preparation Tutoring"> More Test Prep Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navButton">
+                            <div class="MainNavButton dropdown-trg mainNavLink" id="Browse_OtherButton"><a class="dropdown-label" href="#" title="Search for Tutors">Other Tutors</a>
+                                <div class="SubNav">
+                                    <div><a href="#" title="Computer Tutoring">Computer Tutors</a></div>
+                                    <div><a href="#" title="Elementary Education Tutoring">Elementary Tutors</a></div>
+                                    <div><a href="#" title="Music Lessons">Music Lessons</a></div>
+                                    <div><a href="#" title="Sports Coaches">Sports Coaches</a></div>
+                                    <div><a href="#" title="Special Needs Tutoring">Special Needs Tutors</a></div>
+                                    <div><a href="#" title="Accounting Tutoring">Accounting Tutors</a></div>
+                                    <div><a href="#" title="Economics Tutoring">Economics Tutors</a></div>
+                                    <div><a href="#" title="Finance Tutoring">Finance Tutors</a></div>
+                                    <div class="moredivnk"> <a href="#" title="Tutor Search">More Tutors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- #SubjectMenu -->
+    
+						<div class="BBBVLogos center hide large-show-inline-block">
+							<a title="Belluga Tutoring, Chicago, IL" href="http://www.bbb.org/chicago/business-reviews/tutoring/Bellugacom-in-chicago-il-88349022#bbblogo" class="rbhzbus bbb" id="bbblink" target="_blank"></a>
+							<a rel="nofollow" href="#" onclick="window.open('https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=WWW.aaa.COM&amp;lang=en','mywindow','menubar=1, scrollbars=yes, width=550,height=450');return false;" class="verisign"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="medium-4 columns">
+					<div class="featureBox center">
+						<span class="sectionTitle iconApple">Simple &amp; Secure</span>
+						<p>Search to find the best tutors near you. Communicate with tutors for free, review feedback, and run background checks to make sure you find the perfect fit.</p>
+					</div>
+				</div>
+				<div class="medium-4 columns">
+					<div class="featureBox center">
+						<span class="sectionTitle iconCircleA">Real Results</span>
+						<p>Since 2005, students have received over 3.2 million hours of instruction through Belluga. Our users report that it takes as little as 8 hours of personalized instruction to improve one full letter grade. </p>
+					</div>
+				</div>
+				<div class="medium-4 columns">
+					<div class="featureBox center">
+						<span class="sectionTitle iconGoodFit">Good Fit Guarantee</span>
+						<p>You don’t pay for your first hour with any tutor unless you find a good fit. You can start lessons with confidence knowing that Belluga has a 99.1% satisfaction rate.</p>
+					</div>
+				</div>
+			</div>
+			<div class="stripe">
+				<div class="row">
+					<div class="medium-4 columns">
+						<div class="statBox medium-text-left">
+							<div class="stat">23,270 students <br>had a lesson with a tutor listed on Belluga last month.</div>
+							<p>Stop struggling and start learning today!</p>
+							<a id="LearnButton" href="#" class="btn">Learn more</a>
+						</div>
+					</div>
+					<div class="medium-8 columns">
+						<div>
+							<h3>Hiring a tutor is easy. Here's how it works:</h3>
+						</div>
+						<div id="HowItWorks">
+							<div class="medium-6 columns">
+								<ol class="graphicList">
+									<li class="horz">
+										<span class="ol-number">1</span>
+										<span class="title">Search</span><br>
+										Search for in-person or online tutoring. Need help with your search? <a href="#">Request a tutor</a> and we’ll have tutors contact you!
+									</li>
+									<li class="horz">
+										<span class="ol-number">2</span>
+										<span class="title">Review</span><br>
+										Read feedback and ratings from parents and students. Detailed tutor profiles also include biographical information, photos, education and more.
+									</li>
+								</ol>
+							</div>
+							<div class="medium-6 columns">
+								<ol class="graphicList">
+								<li class="horz">
+										<span class="ol-number">3</span>
+										<span class="title">Schedule</span><br>
+										Communicate directly with tutors to find a time that works for you. Whether you need a single lesson or help all semester, you are in control.
+									</li>
+									<li class="horz">
+										<span class="ol-number">4</span>
+										<span class="title">Learn</span><br>
+										One-on-one instruction is the most effective way to learn.  Let Belluga handle payments and administrative details so you can focus on what matters.
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="medium-4 columns">
+					<div class="statBox medium-text-left">
+						<div class="stat">See what students have to say</div>
+						<p>Set your goals high, we'll help you reach them.</p>
+						<a href="#" class="btn">Search for a tutor</a>
+					</div>
+				</div>
+				<div class="student-video medium-8 columns">
+					
+
+<a class="fancyVideo" href="http://www.youtube.com/#">
+	<img class="videoStill" alt="Watch this student share her story." src="{% static 'images/home/studentHTThumbnail.png' %}">
+	<p class="spc-zero"></p>
+</a>
+				</div>
+			</div>
+
+			<div class="stripe">
+				<div class="row">
+					<div class="medium-4 columns">
+						<div class="studentReviewBox">
+							<h3>What students say about tutors</h3>
+							
+	<ul class="studentReviewBox-review carousel reset" style="height: 260px;">
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Great tutor!</div><input type="hidden" value="52512">
+					<div class="quote">
+						"We are so pleased to have an excellent long term working relationship with Lizelle. She is always professional, dependable, and her expertise is outstanding. We are truly fortunate to have her as our tutor!"
+					</div>
+					<div class="byLine">
+						Evelyn<br>
+						Scranton, PA
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Marvelous </div><input type="hidden" value="45675">
+					<div class="quote">
+						"She is more than my daughter's tutor, she is a special friend. She is excellent and my daughter loves her. She has learned a great deal since Ms. Patti has been her tutor. We are so grateful to have her."
+					</div>
+					<div class="byLine">
+						Kathleen<br>
+						Etters, PA
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Best tutor I've ever had!</div><input type="hidden" value="52563">
+					<div class="quote">
+						"That is what my daughter says about Karen. She puts the effort and time to make sure my daughter understands detailed math concepts and relationships. As a result, my daughter is no longer struggling . . ."
+					</div>
+					<div class="byLine">
+						Kate<br>
+						Seekonk, MA
+					</div>
+				</div>
+			</li>
+
+		<li class="pagerItem center more">
+		    <a href="#" class="btn btn-lgt">Read more reviews</a>
+		</li>
+        <li class="controls">
+            <a class="pagerPrevious" href="#"></a>
+            <a class="pagerNext" href="#"></a>
+        </li>
+	</ul>
+	<div class="quoteTail"></div>
+
+
+						</div>
+					</div>
+					<div class="medium-4 columns">
+						<div class="studentReviewBox">
+							<h3>What students say about Belluga</h3>
+							
+	<ul class="studentReviewBox-review carousel reset" style="height: 260px;">
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Fantastic!</div><input type="hidden" value="6771">
+					<div class="quote">
+						"Our tutors were always professional and the pricing is amazing for the area we live in. Great in a pinch as well when needed tutoring on short notice. We used tutors for Chemistry and Calculus."
+					</div>
+					<div class="byLine">
+						HANNAH SUE (MOM LEE)<br>
+						Bethesda, MD
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Belluga makes finding and paying a tutor easy</div><input type="hidden" value="5936">
+					<div class="quote">
+						"I have had a great experience using Belluga. It's incredible how easy they have made it to find and pay a tutor."
+					</div>
+					<div class="byLine">
+						Cadie<br>
+						Manchaca, TX
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="title">Great tutor selection</div><input type="hidden" value="6332">
+					<div class="quote">
+						"Our 13 year old daughter has been extremely happy with her tutor. We have already recommended her to our friends. Thank you for providing such a great selection of tutors!"
+					</div>
+					<div class="byLine">
+						Toshiko<br>
+						Winnetka, IL
+					</div>
+				</div>
+			</li>
+
+		<li class="pagerItem center more">
+		    <a href="#" class="btn btn-lgt">Read more reviews</a>
+		</li>
+        <li class="controls">
+            <a class="pagerPrevious" href="#"></a>
+            <a class="pagerNext" href="#"></a>
+        </li>
+	</ul>
+	<div class="quoteTail"></div>
+
+
+						</div>
+					</div>
+					<div class="medium-4 columns">
+						<div class="statBox center medium-text-left spc-n">
+							<div class="stat"> Belluga has tutors within 10 miles of 93.7% of the US population.</div>
+							<p>Chances are you might know someone who has used Belluga!</p>
+							<a href="#" class="btn">Find a tutor now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="medium-4 columns">
+					<div class="reviewStatBox statBox center medium-text-left">
+						<div class="stat">Are you ready to become a tutor and make a difference in your community?</div>
+						<p>Belluga is currently accepting applications from expert educators.</p>
+						<a href="#" class="btn">Apply to join us today</a>
+					</div>
+				</div>
+				<div class="medium-8 columns">
+					<div class="tutorReviewBox smallCenter largeCenter pagerContainer">
+						
+	<ul class="tutorReviewBox-review carousel reset" style="height: 262px;">
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="reviewContent">
+						<div class="title">Great easy to work with tutoring service!</div><input type="hidden" value="4091">
+						<div class="quote">
+							"Belluga is an extremely "user-friendly" website for both tutors and students! I have found more students than I thought I could handle but so far so good! It has almost become a full time job for me! I so enjoy meeting the students and the parents who care enough about their child's education to use a service like Belluga!"
+						</div>
+					</div>
+					<div class="byLine">
+						<div class="tutorName">
+<img src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/fe4d6b67-7f02-406c-ae2d-0bdb65d97f34.jpg" class="tutorPic large-show">						<br>Kelly H.</div>
+						Jacksonville, FL
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="reviewContent">
+						<div class="title">Belluga &ndash; the wise way of tutoring</div><input type="hidden" value="6591">
+						<div class="quote">
+							"Belluga proved itself to be the best tutoring website in the country! I am from Europe and have a pretty wide perspective on tutoring markets. I have had profiles at other tutoring sites, but none of them has worked as well as Belluga. That's why I love working with them and feel comfortable recommending them."
+						</div>
+					</div>
+					<div class="byLine">
+						<div class="tutorName">
+<img src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/c45e8291-9b5b-4e46-90a4-be57f4b9ef16.jpg" class="tutorPic large-show">						<br>Mariana S.</div>
+						Greenwood, IN
+					</div>
+				</div>
+			</li>
+			<li class="pagerItem">
+				<div class="itemContent">
+					<div class="reviewContent">
+						<div class="title">Belluga Builds Your Reputation</div><input type="hidden" value="6691">
+						<div class="quote">
+							"Your reputation is more important than a few extra dollars. Tutor a student on your own, and you'll enjoy a good business relationship for the moment; tutor a student with Belluga, and you're investing in your future."
+						</div>
+					</div>
+					<div class="byLine">
+						<div class="tutorName">
+<img src="http://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/fbbba729-f03d-4434-9c5a-055f53639992.jpg" class="tutorPic large-show">						<br>Matthew L.</div>
+						Silver Spring, MD
+					</div>
+				</div>
+			</li>
+
+		<li class="pagerItem center more">
+		    <a href="#" class="btn btn-lgt">Read more reviews</a>
+		</li>
+        <li class="controls">
+            <a class="pagerPrevious" href="#"></a>
+            <a class="pagerNext" href="#"></a>
+        </li>
+
+	</ul>
+	<div class="tutorReviewTail"></div>
+
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row pad-zero hide medium-show">
+				<div class="mediaLogos">
+					<img src="{% static 'images/home/media-logos.png' %}">
+				</div>
+			</div>
+
+			<div class="row pad-zero">
+				<div class="medium-12 columns center spc-med-n">
+					<div class="helpText">Need help? Real people will answer your call right away.</div>
+					<div class="subText">Call (877) 999-2681 or email info@gmail.com</div>
+					<a href="#" class="btn large spc-med">Learn more about Belluga</a>
+				</div>
+			</div>
+
+			<div class="row hide medium-show pad-zero">
+				<div class="medium-12 columns csPhoto">
+					<img src="{% static 'images/home/cs-photo-footer.jpg' %}">
+				</div>
+			</div>
+
+		</div>
+	</div>
+    
+    
+{% endblock %}

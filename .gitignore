@@ -1,1 +1,4 @@
 Thumbs.db
+db.sqlite3
+*.pyc
+accounts/static/media

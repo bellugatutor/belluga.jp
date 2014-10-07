@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/HowItWorks.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="row spc-s">
+    <div class="medium-4 columns">
+        <h1 class="txt-orange hdr-page medium-text-left">Find the perfect tutor</h1>
+    </div>
+    <div class="medium-8 columns">
+        <p class="featured">WyzAnt makes it easy to find expert tutors at affordable prices. Find <i>your</i> perfect tutor today!</p>
+    </div>
+</div>
+
+<div class="contentGrid">
+			<div class="content">
+				<div class="stripe">
+					<div class="row hiw-video">
+						
+	<h2 data-expandtarget="[data-section='video']" class="txt-blue medium-hide mobile-click">
+		<span>Set your goals high</span>
+	</h2>
+
+	<div class="small-hideHeight medium-showHeight" data-section="video">
+		<div class="medium-4 column center spc-med-s">
+			<div class="hide medium-show">
+				<img src="{% static 'images/icons/48x48/icon-bluedot_trophy.png' %}" class="hiw">
+				<h2 class="txt-blue">Set your goals high</h2>
+			</div>
+			<p class="spc-s">We’ll help you reach them.</p>
+			<a class="btn" href="#">Find a tutor</a>
+		</div>
+
+		<div class="medium-8 column">
+			
+
+<a class="fancyVideo" href="http://www.youtube.com/">
+	<img class="videoStill" alt="See what students have to say" src="{% static 'images/HowItWorks/student-video-still.jpg' %}">
+	<p class="spc-zero"></p>
+</a>
+			<h3>See what students have to say</h3>
+		</div>
+	</div>
+
+					</div>
+				</div>
+
+				<div class="row">
+					
+    <h2 data-expandtarget="[data-section='find']" class="txt-blue medium-hide mobile-click">
+        <span>Search tutor profiles</span>
+    </h2>
+
+    <div class="small-hideHeight medium-showHeight" data-section="find">
+	    <div class="medium-4 column center spc-med-s">
+            <div class="hide medium-show">
+		        <img src="{% static 'images/HowItWorks/icon-search-tutors-2.png' %}" class="hiw">
+		        <h2 class="txt-blue">Search tutor profiles</h2>
+            </div>
+		    <p class="spc-s">Find the right tutor for you</p>
+		    <a class="btn" href="tutor_search.html">Search for a tutor</a>
+	    </div>
+
+	    <div class="medium-4 column">
+		    <h1 class="txt-green txt-thin spc-med-s">73,100+ qualified tutors</h1>
+		    <ul class="greenCheck">
+			    <li>Free access to qualified tutors who offer in-person and online tutoring.</li>
+			    <li>All tutors are tested and reviewed to ensure top quality.</li>
+			    <li>Order up-to-date background checks for any tutor.</li>
+		    </ul>
+	    </div>
+
+	    <div class="medium-4 column center">
+		    <img src="{% static 'images/HowItWorks/graphic-searchresults.jpg' %}">
+	    </div>
+    </div>
+
+				</div>
+
+				<div class="stripe">
+					<div id="communicate" class="row">
+						
+    <h2 data-expandtarget="[data-section='communicate']" class="txt-blue medium-hide mobile-click">
+        <span>Communicate with tutors</span>
+    </h2>
+
+    <div class="small-hideHeight medium-showHeight" data-section="communicate">
+	    <div class="medium-4 column center spc-med-s">
+            <div class="hide medium-show">
+		        <img src="{% static 'images/HowItWorks/icon-communicate.png' %}" class="hiw">
+		        <h2 class="txt-blue">Communicate with tutors</h2>
+            </div>
+		    <p class="spc-s sideSubHead">Review tutor profiles and contact tutors for free</p>
+		    <a class="btn" href="tutor_search.html">Contact tutors</a>
+	    </div>
+	    <div class="medium-8 columns">
+		    <h1 class="txt-green txt-thin spc-med-s">Choose your tutor</h1>
+            <div class="row">
+		        <div class="medium-6 column">
+			        <p class="large spc-zero">Once you've identified a few potential tutors, send them emails to discuss scheduling and any other questions you may have. After you send your first email, WyzAnt will create a free account for you to help you keep track of your tutors.</p>
+		        </div>
+
+		        <div class="medium-6 column">
+			        <ul class="greenCheck">
+				        <li>Review feedback and ratings from past students.</li>
+				        <li>Discuss scheduling, learning styles and more to ensure you find the perfect fit.</li>
+				        <li>Short on time? <a href="#">Request a tutor</a> to have qualified tutors contact you!</li>
+			        </ul>
+		        </div>
+            </div>
+	    </div>
+    </div>
+
+
+					</div>
+				</div>
+
+				<div id="payment" class="row">
+					
+    <h2 data-expandtarget="[data-section='payment']" class="txt-blue medium-hide mobile-click">
+        <span>Hassle-free payment</span>
+    </h2>
+
+    <div class="small-hideHeight medium-showHeight" data-section="payment">
+	    <div class="medium-4 columns center spc-med-s">
+            <div class="hide medium-show">
+		        <img src="{% static 'images/HowItWorks/icon-get-paid.png' %}" class="hiw">
+		        <h2 class="txt-blue">Hassle-free payment</h2>
+            </div>
+		    <p class="spc-s sideSubHead">WyzAnt makes payment simple so you can focus on learning</p>
+		    <a class="btn" href="tutor_search.html">Get started</a>
+	    </div>
+	    <div class="medium-8 columns">
+		    <h1 class="txt-green txt-thin spc-med-s">Payment made easy</h1>
+            <div class="row">
+		        <div class="medium-6 column">
+			        <div class="bg-img-div secure">WyzAnt will securely process payment after each lesson. Focus on learning, and let WyzAnt take care of the rest.</div>
+			        <div class="bg-img-div great-tutoring">No commitments, scheduling restrictions or upfront fees. Get great tutoring when you need it.</div>
+		        </div>
+
+		        <div class="medium-6 column">
+			        <div class="bg-img-div dollar">Most tutors charge between $30-$50/hr.
+					 <span>Save up to 15% on any tutor's rate with discounts from WyzAnt. <a href="/HowItWorks/popup?popupId=Discount" class="popupInitiator wyzAjaxRegistered">Learn more</a></span>
+					</div>
+			        <div class="bg-img-div good-fit">We're so confident you'll find the right tutor, WyzAnt will cover the cost of your first hour with any tutor if you are not 100% satisfied. <a href="#" class="popupInitiator wyzAjaxRegistered">Learn more</a></div>
+		        </div>
+            </div>
+	    </div>
+    </div>
+
+
+
+				</div>
+
+				<div class="stripe">
+					<div id="results" class="row">
+						    
+    <h2 data-expandtarget="[data-section='results']" class="txt-blue medium-hide mobile-click">
+        <span>Get results</span>
+    </h2>
+
+    <div class="small-hideHeight medium-showHeight" data-section="results">
+	    <div class="medium-4 column center spc-med-s">
+            <div class="hide medium-show">
+		        <img src="{% static 'images/HowItWorks/icon-get-results.png' %}" class="hiw">
+		        <h2 class="txt-blue">Get results</h2>
+            </div>
+		    <p class="spc-s sideSubHead">Gain confidence, improve grades and make learning fun</p>
+		    <a class="btn" href="tutor_search.html">Search for a tutor</a>
+	    </div>
+	    <div class="medium-8 columns">
+		    <h1 class="txt-green txt-thin spc-med-s">Progress you can see</h1>
+            <div class="row">
+		        <div class="medium-6 column">
+			        <ul class="greenCheck">
+				        <li>WyzAnt users report a full letter grade improvement with as little as 8 hours of tutoring.</li>
+				        <li>Since 2005, WyzAnt has helped hundreds of thousands of students find the support they need.</li>
+				        <li>Students and parents can track progress with detailed lesson reviews provided by tutors.</li>
+			        </ul>
+		        </div>
+
+		        <div class="medium-6 column">
+			        <p class="quote txt-lgt">"Linnea has produced amazing results with my middle school daughter in a just a few short weeks. &nbsp;I can't believe the change in our daughter-she willingly completes writing assignments and looks forward to her weekly tutoring sessions."</p>
+			        <p class="quoteBy txt-lgt">- Kim from Chicago, IL</p>
+		        </div>
+            </div>
+	    </div>
+    </div>
+
+					</div>
+				</div>
+
+				<div class="stripe blue">
+					<div class="row">
+						<div class="column center numberBox">
+							<span class="small-12 numberBox-big">
+								<img class="clock hide medium-show-inline-block" src="{% static 'images/icons/icon-clock.png' %}">Over 2,000,000
+							</span>
+							<span class="numberBox-small">hours tutored and counting...</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="row logos">
+					<div class="column center">
+	<img class="hide medium-show" src="{% static 'images/HowItWorks/media-logos-strip.png' %}">
+	<img class="logos410 medium-hide" src="{% static 'images/HowItWorks/media-logos-strip-410.png' %}">
+</div>
+
+				</div>
+
+				<div class="row faqs">
+					<div class="medium-12 column">
+						<h1 class="hdr-thin">Frequently asked questions</h1>
+					</div>
+					<div class="medium-6 column">
+	<p data-expandtarget="[data-section='faq1']" class="txt-semibold faq-hdr">Q. What is WyzAnt?</p>
+	<p data-section="faq1" class="spc-med-s small-hideHeight medium-showHeight">A. WyzAnt.com was started in 2005 with one purpose in mind: to make it as easy as possible for students to find their perfect tutor. Tutoring is a very personal experience and it's important that students find a good fit in a tutor to get the most out of each lesson. With over 73,100 qualified tutors, WyzAnt makes it easy for students to find that perfect tutor.</p>
+
+	<p data-expandtarget="[data-section='faq2']" class="txt-semibold faq-hdr">Q. What kind of credentials do the tutors have?</p>
+	<p data-section="faq2" class="spc-med-s small-hideHeight medium-showHeight">A. Tutors on WyzAnt come from a variety of backgrounds and include certified teachers, industry professionals, graduate and undergraduate students and more. All tutors have been reviewed by WyzAnt staff and passed subject proficiency exams in the subjects that they teach. Many tutors feature verified background checks and you may order an up-to-date background check on any tutor.</p>
+
+	<p data-expandtarget="[data-section='faq3']" class="txt-semibold faq-hdr">Q. How much do lessons cost?</p>
+	<p data-section="faq3" class="spc-med-s small-hideHeight medium-showHeight">A. Tutors are able to set their own hourly rate, typically between $30-$50/hr. You are not required to make a payment until after a lesson takes place and you are never required to commit to a minimum number of lessons. Similar to making a reservation at a hotel, we do require you to add a form of payment prior to beginning lessons so that we may bill you after your lesson takes place.</p>
+</div>
+<div class="medium-6 column">
+	<p data-expandtarget="[data-section='faq4']" class="txt-semibold faq-hdr">Q. How do I pay for lessons?</p>
+	<p data-section="faq4" class="spc-med-s small-hideHeight medium-showHeight">A. Payment can be made by credit card or PayPal after lessons take place or by check if paid in advance. After a lesson occurs, your tutor will report the time along with a detailed lesson review. WyzAnt will process payment and send your receipt via email. 
+	<span>WyzAnt also offers discounts of up to 15% for <a href="#" class="popupInitiator wyzAjaxRegistered">prepaid package purchases</a>.</span>
+	</p>
+
+	<p data-expandtarget="[data-section='faq5']" class="txt-semibold faq-hdr">Q. Where does the tutoring take place?</p>
+	<p data-section="faq5" class="spc-med-s small-hideHeight medium-showHeight">A. You and your tutor are free to choose any convenient location for lessons. Many students choose to have lessons in their homes, while others prefer to meet in a public location such as a library or coffee shop. Some tutors on WyzAnt also offer online tutoring for additional help in between lessons or in lieu of in-person lessons. </p>
+
+	<p data-expandtarget="[data-section='faq6']" class="txt-semibold faq-hdr">Q. Does WyzAnt offer any guarantee?</p>
+	<p data-section="faq6" class="small-hideHeight medium-showHeight">A. WyzAnt offers a 100% Good Fit Guarantee on the first hour of lessons with any tutor. WyzAnt will cover the cost of your first hour spent with any tutor if you are not completely satisfied. We understand that the right tutor must not only be qualified, but also capable of connecting with a student's unique personality and learning style.</p>
+	<p class="spc-s">Still have questions? <a href="#">View all FAQs</a>.</p>
+</div>
+
+				</div>
+
+				<div class="row spc-s">
+					<div class="medium-12 column center">
+						<a class="btn" href="tutor_search.html">Search for a tutor</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock content %}
