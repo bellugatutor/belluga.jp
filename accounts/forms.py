@@ -1,3 +1,4 @@
+from django import forms
 from collections import OrderedDict
 from django.contrib.auth.forms import UserCreationForm as AuthUserCreationForm
 from django.contrib.auth.forms import UserChangeForm as AuthUserChangeForm
@@ -52,4 +53,11 @@ class TutorCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         fields = UserCreationForm.Meta.fields
-        fields += ('nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_video', 'language', 'hourly_rate')
+        fields += ('is_tutor', 'nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_video', 'language', 'hourly_rate')
+        widgets = {
+            'is_tutor': forms.HiddenInput(),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(TutorCreationForm, self).__init__(*args, **kwargs)
+        self.fields['is_tutor'].initial = True

@@ -6,6 +6,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext_lazy as _
 from .forms import UserCreationForm, LoginForm, TutorCreationForm
+from .models import User
 
 
 def home(request):
@@ -63,4 +64,7 @@ def logout(request):
 
 
 def search_tutor(request):
-    return HttpResponse('search tutor')
+    context = {
+        'tutors': User.get_tutors(),
+    }
+    return render(request, 'tutor_search.html', context)

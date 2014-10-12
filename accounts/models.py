@@ -48,6 +48,14 @@ class User(AbstractUser):
             return ' '.join([self.first_name, self.last_name])
         return self.username
 
+    @classmethod
+    def get_tutors(self):
+        return User.objects.filter(is_tutor=True)
+
+    @classmethod
+    def get_students(self):
+        return User.objects.filter(is_tutor=False)
+
 
 class Time(models.Model):
     ''' totors' available time '''

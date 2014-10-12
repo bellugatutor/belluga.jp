@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/form-search.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/tutor-search.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div id="SiteMaster_PageMainContent">
+<div class="Centered960">
+<div class="" id="OneColumn">
+
+    <div class="searchRight">
+	<div class="header noSubHeader" id="searchHeader">
+		<div class="searchTitle">
+			<h1>
+				<span class="totalResults">{{ tutors|length }}</span> tutors
+			</h1>
+		</div>
+
+        <div data-wyz-replace-target="true" data-wyz-form-target=".searchRight" class="ajaxForm search-sort">
+            <form method="post" action="" id="SearchSortForm">
+                <input type="hidden" value="1" name="pageNum">
+                Sort by:
+                <select name="sort" id="sort"><option value="14" selected="selected">Best Match</option>
+                <option value="5">Lowest Price</option>
+                <option value="4">Highest Price</option>
+                <option value="20">Rating</option>
+                <option value="1">Distance</option>
+                </select>
+            </form>
+        </div>
+		<div class="clearBoth"></div>
+	</div>
+	
+    <div class="results">
+		<div class="results">
+        <div class="searchResults">
+
+            {% for tutor in tutors %}
+            <div class="resultOuter">
+				<div class="resultInner">
+
+					<div class="tutorPicture">
+						<a class="customTutorPic" title="" href="#">
+							<img alt="" src="{% if tutor.photo %}{{ tutor.photo.url }}{% else %}{% static 'images/avatar.jpg' %}{% endif %}">
+						</a>
+					</div>
+
+					<div class="tutorData">
+						<div class="tutorDataRow hours hide medium-show">
+                            <img alt="Over 50 tutoring hours" class="TutorBadge" src="{% static 'images/HourBadges/38x38/hours50.png' %}">
+                        </div>
+
+						<div class="tutorDataRow price">{{ tutor.hourly_rate }}JPY/hour</div>
+
+						<div class="tutorStats">
+                            <a class="popUpAjaxLink backgroundCheckLink wyzAjaxRegistered" href="#" data-wyz-ajax-target="#popUpTarget">
+                                Background checked
+                            </a>
+                            <a href="#" class="testimonials testimonialLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+                                1 testimonial
+                            </a>
+                            <span title="5.0 of 5 stars" class="stars">
+                                <a href="#" class="starRatingLink popUpAjaxLink wyzAjaxRegistered" data-wyz-ajax-target="#popUpTarget">
+                                <span class="starsempty">
+                                    <span style="width:100.000000%;" class="starsfull">&nbsp;</span>
+                                </span>
+                                <span class="starsdesc">3 ratings</span>
+                                </a>
+                            </span>
+						</div>
+						<div class="tutorLinkRow">
+							<a title="" href="#" class="btn">View this tutor</a>
+						</div>
+					</div>
+
+					<div class="tutorMain">
+						<div class="tutorLocation">
+                            <span class="miles">6.1 miles,</span>
+							<span class="location">Mountain View, CA <span class="zip">94040</span></span>
+						</div>
+
+						<h4><a title="{{ tutor.get_full_name }}" href="#">{{ tutor.get_full_name }}</a></h4>
+
+						<h2>Music Industry Veteran, Professional Trombone Instructor</h2>
+
+						<div class="tutorFR">
+							{{ tutor.intro_text }}
+							<a href="#">read more</a>
+						</div>
+
+						<h3 class="tutorSubjectList">
+                            Offering 5 subjects
+						</h3>
+					</div>
+
+					<div style="height:1px;" class="ClearBoth"></div>
+				</div>
+			</div> <!-- .resultOuter -->
+            {% endfor %}
+
+        </div>
+        </div>
+        
+        <div class="searchDetails bottomPager hide medium-show">
+            <div class="pager">
+            <span class="SimplePagerContainer">
+                <a href="#" data-page-size="10" data-page-num="1" class="SimplePagerLink pg aspNetDisabled CurrentPage">1</a>
+                <a href="#" data-page-size="10" data-page-num="2" class="SimplePagerLink pg">2</a>
+                <a href="#" data-page-size="10" data-page-num="3" class="SimplePagerLink pg">3</a>
+                <a href="#" data-page-size="10" data-page-num="4" class="SimplePagerLink pg">4</a>
+                <a href="#" data-page-size="10" data-page-num="5" class="SimplePagerLink pg">5</a>
+                <a href="#" data-page-size="10" data-page-num="2" class="SimplePagerLink pg next">next</a>
+            </span>
+            </div>
+            <a href="javascript:scroll(0,0)" class="backTopLink">Back to top</a>
+        </div>
+        
+    </div>
+    </div> <!-- .searchRight -->
+
+    <div class="verticalSearch row">
+        <form method="get" class="search-box" action="/TutorSearch">
+        <fieldset class="responsiveTable">
+            <div class="search-hdr">Search For Tutors</div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="kw">Subject</label>
+                    <input type="text" value="" name="kw" id="kw" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                    <span data-valmsg-replace="true" data-valmsg-for="kw" class="field-validation-valid"></span>
+                </div>
+            </div>
+
+
+            <div class="row not-for-online ">
+                <div class="columns small-6">
+                    <label for="z">ZIP code</label>
+                    <input type="tel" value="94305" name="z" maxlength="5" id="z" data-val-regex-pattern="^(\s*\d{5}\s*)?$" data-val-regex="Please enter a valid zip code." data-val="true" class="zip-input safeEnterControl">
+                    <span data-valmsg-replace="true" data-valmsg-for="z" class="field-validation-valid"></span>
+                </div>
+
+                <div class="columns small-6 srch-opt-distance last">
+                    <label for="d">Distance</label>
+                    <select name="d" id="d">
+                            <option value="1">1 mile</option>
+                            <option value="2">2 miles</option>
+                            <option value="5">5 miles</option>
+                            <option value="10">10 miles</option>
+                            <option value="15">15 miles</option>
+                            <option selected="selected" value="20">20 miles</option>
+                            <option value="25">25 miles</option>
+                            <option value="30">30 miles</option>
+                            <option value="35">35 miles</option>
+                            <option value="40">40 miles</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="advanced-options hide">
+                <div class="row">
+                    <div class="column">
+                        <label for="kw2">Subject 2</label>
+                        <input type="text" value="" name="kw2" id="kw2" disabled="disabled" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                        <span data-valmsg-replace="true" data-valmsg-for="kw2" class="field-validation-valid"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="kw3">Subject 3</label>
+                        <input type="text" value="" name="kw3" id="kw3" disabled="disabled" data-wyzac-searchtype="SubjectSearch" class="wyzAC safeEnterControl ui-autocomplete-input" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                        <span data-valmsg-replace="true" data-valmsg-for="kw3" class="field-validation-valid"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label>Hourly rate</label>
+                    </div>
+                        <div data-max="200" data-min="10" class="columns small-6 end text-left slider-bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
+                        <div class="columns small-5 slider-inputs">
+                            $<span class="min-text">10</span> to $<span class="max-text">200</span>
+                            <input type="hidden" value="10" name="minh" id="minh" disabled="disabled" data-val-range-min="10" data-val-range-max="200" data-val-range="The field Minimum hourly rate must be between 10 and 200." data-val-number="The field Minimum hourly rate must be a number." data-val="true">
+                            <input type="hidden" value="200" name="maxh" id="maxh" disabled="disabled" data-val-range-min="10" data-val-range-max="200" data-val-range="The field Maximum hourly rate must be between 10 and 200." data-val-number="The field Maximum hourly rate must be a number." data-val="true">
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label>Age</label>
+                    </div>
+                        <div data-max="100" data-min="18" class="columns small-6 end text-left slider-bar ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 0%; width: 100%;"></div><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 0%;"></a><a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div>
+                        <div class="columns small-5 slider-inputs">
+                            <span class="min-text">18</span> to <span class="max-text">100</span>
+                            <input type="hidden" value="18" name="mina" id="mina" disabled="disabled" data-val-range-min="18" data-val-range-max="100" data-val-range="The field Minimum age must be between 18 and 100." data-val-number="The field Minimum age must be a number." data-val="true">
+                            <input type="hidden" value="100" name="maxa" id="maxa" disabled="disabled" data-val-range-min="18" data-val-range-max="100" data-val-range="The field Maximum age must be between 18 and 100." data-val-number="The field Maximum age must be a number." data-val="true">
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="im">Gender</label>
+                        <select disabled="disabled" name="im" id="im">
+
+                                <option selected="selected" value="-1">No Preference</option>
+                                <option value="0">Female</option>
+                                <option value="1">Male</option>
+                        </select>
+                        <span data-valmsg-replace="true" data-valmsg-for="im" class="field-validation-valid"></span>
+                    </div>
+                </div>
+
+                <div class="row spc-sm">
+                    <div class="column">
+                        <input type="checkbox" disabled="disabled" value="true" name="bgCheck" id="bgCheck">
+                        
+                        <label for="bgCheck">Background check on file</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="columns small-6 large-5">
+                    <button class="btn btn-blue" type="submit">Search</button>
+                </div>
+                <div class="columns small-6 large-7">
+                        <a class="search-expand-link">Advanced search <b>+</b></a>
+                </div>
+            </div>
+        </fieldset>
+        </form>
+
+        <div class="siteStats hide medium-show">
+            <div>
+                <span class="stat">73,199</span>
+            </div>
+        </div>
+
+        <div class="searchSideContent hide medium-show">
+            <div class="guarantee">
+                <span id="sideguarantee"><img alt="good fit guarantee" src="{% static 'images/pages/search/goodFitMessage.png' %}"></span>
+            </div>
+        </div>
+
+		<div class="hide medium-show">
+            <div class="displaySearchTestimonials">
+                <div class="testimonial">
+                    <img alt="" src="{% static 'images/testimonials/location-CA-2.png' %}">
+                </div> 
+                <div class="testimonial">
+                    <img alt="" src="{% static 'images/testimonials/subject-science-3.png' %}">
+                </div> 
+                <div class="testimonial">
+                    <img alt="" src="{% static 'images/testimonials/pricing-6.png' %}">
+                </div> 
+                <div class="testimonial">
+                    <img alt="" src="{% static 'images/testimonials/safety-4.png' %}">
+                </div> 
+            </div>
+            <p><img src="{% static 'images/pages/search/featuredIn.png' %}"></p>
+		</div>
+	</div>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

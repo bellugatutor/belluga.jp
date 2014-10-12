@@ -6,13 +6,14 @@ from .forms import UserCreationForm, UserChangeForm
 
 
 class UserAdmin(AuthUserAdmin):
+    save_on_top = True
     add_form = UserCreationForm
     form = UserChangeForm
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         (_('Personal info'), {'fields': ('last_name', 'first_name', 'email', 'phone')}),
         (_('Credit card'), {'fields': ('card_type', 'card_number', 'card_name', 'expiration_date')}),
-        (_('Tutor info'), {'fields': ('nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_video', 'language', 'hourly_rate')}),
+        (_('Tutor info'), {'fields': ('is_tutor', 'nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_video', 'language', 'hourly_rate')}),
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
