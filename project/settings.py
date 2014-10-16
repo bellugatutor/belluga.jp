@@ -103,8 +103,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/static/media/'
 # switch the following two MEDIA_ROOT when development to production
-#~ MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'accounts', 'static', 'media')
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -117,3 +116,8 @@ MESSAGE_TAS = {
     messages.WARNING: 'warning',
     messages.ERROR: 'danger',
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

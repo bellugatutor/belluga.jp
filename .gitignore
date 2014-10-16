@@ -2,3 +2,4 @@ Thumbs.db
 *.sqlite3
 *.pyc
 accounts/static/media
+local_settings.py
