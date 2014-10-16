@@ -1,6 +1,13 @@
+import random
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import ugettext_lazy as _
+
+CARD_TYPE_CHOICES = (
+    ('JCB', _('JCB')),
+    ('MasterCard', _('MasterCard')),
+    ('VISA', _('VISA')),
+)
 
 SPEAK_JAPAN_CHOICES = (
     ('yes', _('Yes')),
@@ -21,22 +28,23 @@ class User(AbstractUser):
 
     # basic info, for both students and turors
     # fields derived from AbstrackUser:
-    # username, first_name, last_name, email, is_staff,is_active, date_joined
+    # username, first_name, last_name, email, is_staff, is_active, date_joined
     # is_superuser, groups, user_permissions, password, last_login
     phone = models.CharField(_('phone number'), max_length=40, blank=True)
 
     # Credit card information
-    card_type = models.CharField(_('credit card type'), max_length=100, blank=True)
+    card_type = models.CharField(_('credit card type'), max_length=100, blank=True, choices=CARD_TYPE_CHOICES)
     card_number = models.CharField(_('credit card number'), max_length=40, blank=True)
-    card_name = models.CharField(_('name associated with card'), max_length=200, blank=True)
+    card_name = models.CharField(_('name with card'), max_length=200, blank=True)
     expiration_date = models.DateField(_('expiration date'), null=True, blank=True)
 
     # for tutors
     is_tutor = models.BooleanField(_('is tutor'), default=False)
     nationality = models.CharField(_('nationality'), max_length=40, blank=True)
     speak_japanese = models.CharField(_('speak Japanese'), max_length=40, choices=SPEAK_JAPAN_CHOICES, default='yes')
-    photo = models.ImageField(_('photo'), upload_to='accounts', blank=True)
-    intro_text = models.TextField(_('introductory paragraph'), blank=True)
+    photo = models.ImageField(_('profile picture'), upload_to='accounts', blank=True)
+    intro_text = models.CharField(_('profile(200 words or less)'), max_length=400, blank=True, help_text=_('It will show up on the search page.'))
+    intro_text2 = models.CharField(_('profile(1000 words or less)'), max_length=2000, blank=True, help_text=_('It will show up on your profile page.'))
     intro_video = models.FileField(_('introductory video'), upload_to='accounts', blank=True)
 
     # Tutoring Preferences
@@ -44,17 +52,29 @@ class User(AbstractUser):
     hourly_rate = models.PositiveIntegerField(_('hourly rate'), choices=HOURLY_RATE_CHOICES, default=2000)
 
     def __unicode__(self):
-        if self.last_name or self.first_name:
-            return ' '.join([self.first_name, self.last_name])
+        if self.first_name:
+            return self.first_name
         return self.username
 
     @classmethod
-    def get_tutors(self):
+    def get_tutors(cls):
         return User.objects.filter(is_tutor=True)
 
     @classmethod
-    def get_students(self):
+    def get_students(cls):
         return User.objects.filter(is_tutor=False)
+
+    def get_sessions(self):
+        if self.is_tutor:
+            return self.gave_sessions.all()
+        else:
+            return self.got_sessions.all()
+
+    def get_reviews(self):
+        return []
+
+    def get_stars(self):
+        return range(random.randint(1,5))
 
 
 class Time(models.Model):

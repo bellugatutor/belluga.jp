@@ -1,5 +1,4 @@
 from django import forms
-from collections import OrderedDict
 from django.contrib.auth.forms import UserCreationForm as AuthUserCreationForm
 from django.contrib.auth.forms import UserChangeForm as AuthUserChangeForm
 from django.contrib.auth.forms import AuthenticationForm as LoginForm
@@ -36,28 +35,32 @@ class AdminUserCreationForm(AuthUserCreationForm):
 class UserCreationForm(AdminUserCreationForm):
 
     class Meta(AdminUserCreationForm.Meta):
-        fields = ('username', 'last_name', 'first_name', 'email', 'phone', 'card_type', 'card_number', 'card_name', 'expiration_date')
+        fields = ('username', 'last_name', 'first_name', 'email', 'card_type', 'card_number', 'card_name', 'expiration_date')
 
     def __init__(self, *args, **kwargs):
         super(AdminUserCreationForm, self).__init__(*args, **kwargs)
-        new_fields = OrderedDict()
-        first_fields = ('username', 'password1', 'password2')
-        for field_name in first_fields:
-            new_fields[field_name] = self.fields.pop(field_name)
-        for field_name, field_value in self.fields.items():
-            new_fields[field_name] = field_value
-        self.fields = new_fields
+        self.fields['email'].required = True
+        self.fields['first_name'].required = True
 
 
 class TutorCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         fields = UserCreationForm.Meta.fields
-        fields += ('is_tutor', 'nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_video', 'language', 'hourly_rate')
+        fields += ('is_tutor', 'nationality', 'speak_japanese', 'photo', 'intro_text', 'intro_text2', 'intro_video', 'language', 'hourly_rate')
         widgets = {
             'is_tutor': forms.HiddenInput(),
+            'intro_text': forms.Textarea(),
+            'intro_text2': forms.Textarea(),
         }
 
     def __init__(self, *args, **kwargs):
         super(TutorCreationForm, self).__init__(*args, **kwargs)
         self.fields['is_tutor'].initial = True
+        self.fields['photo'].required = True
+        self.fields['nationality'].required = True
+        self.fields['speak_japanese'].required = True
+        self.fields['intro_text'].required = True
+        self.fields['intro_text2'].required = True
+        self.fields['language'].required = True
+        self.fields['hourly_rate'].required = True

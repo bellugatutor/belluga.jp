@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% load widget_tweaks %}
+{% load thumbnail %}
+
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-md-3 col-sm-4 col-xs-12">
+        <div class="search-form">
+            <div class="search-title">{% trans 'Search for a Tutor' %}</div>
+            <form role="form" method="post" action="{% url 'search_tutor' %}"> {% csrf_token %}
+                <select name="language" class="form-control" style="margin-bottom:15px">
+                    <option value="English">{% trans 'English' %}</option>
+                    <option value="Chinese">{% trans 'Chinese' %}</option>
+                    <option value="Korean">{% trans 'Korean' %}</option>
+                </select>
+                <select name="prefecture" class="form-control" style="margin-bottom:15px">
+                    <option value="Tokyo">{% trans 'Prefecture:Tokyo' %}</option>
+                </select>
+                <select name="area" class="form-control" style="margin-bottom:15px">
+                    <option value="Roppongi">{% trans 'Area:Roppongi' %}</option>
+                </select>
+                <button type="submit" class="btn btn-lg">{% trans 'Search' %}</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-9 col-sm-8 col-xs-12">
+        <div class="search-results-title">
+            <strong>{{ tutors|length }}</strong> {% trans 'tutors have been found' %}
+        </div>
+        {% for tutor in tutors %}
+            <div class="search-result clearfix">
+                <div class="pull-left">
+                    <img src="{% if tutor.photo %}{% thumbnail tutor.photo 100x100 crop='smart' %}{% else %}{% static 'images/avatar.jpg' %}{% endif %}" />
+                </div>
+                <div class="pull-right" style="width:185px">
+                    <div class="hourly-rate text-right">{{ tutor.hourly_rate }} JPY</div>
+                    <div class="tutor-lessons text-right">{{ tutor.get_sessions|length }} {% trans 'Lessons' %}</div>
+                    <div class="tutor-reviews text-right clearfix">
+                        {% for i in tutor.get_stars %}
+                            <i class="star pull-left"></i>
+                        {% endfor %}
+                        <a href="#" style="text-decoration:underline">{{ tutor.get_reviews|length }} {% trans 'Reviews' %}</a>
+                    </div>
+                    <a href="#" class="btn btn-info btn-block">{% trans 'Request a Lesson' %}</a>
+                </div>
+                <div style="margin-left:115px;margin-right:200px">
+                    <p><a href="#" style="text-decoration:underline">{{ tutor }}</a></p>
+                    <p>{{ tutor.nationality }}</p>
+                    <p>{{ tutor.intro_text }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock content %}

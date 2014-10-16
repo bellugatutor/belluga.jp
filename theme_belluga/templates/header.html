@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load static %}
+
+<div class="container">
+    <div class="clearfix">
+        <div class="pull-left">
+            <a href="/" class="logo"></a>
+        </div>
+        <div class="pull-right">
+            <img src="{% static 'images/phone.png' %}" />
+            <br/>
+            {% if user.is_authenticated %}
+                {% trans 'Welcome,' %} {{ user }}. 
+                <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="login_register"></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="clearfix" style="margin-top:10px">
+        <ul class="nav nav-pills pull-right top-numbers">
+            <li><a href="#" class="registered students {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_students }}</a></li>
+            <li><a href="#" class="registered tutors {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_tutors }}</a></li>
+            <li><a href="#" class="registered lessons {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_lessons }}</a></li>
+        </ul>
+
+        <ul class="main-nav nav nav-pills pull-left">
+            <li class="rb1"><a href="/">{% trans 'Home' %}</a></li>
+            <li class="rb1"><a href="{% url 'search_tutor' %}">{% trans 'Look for a Tutor' %}</a></li>
+            <li class="rb1"><a href="{% url 'signup_tutor' %}">{% trans 'Become a Tutor' %}</a></li>
+            <li class="rb1"><a href="{% url 'howitwork_students' %}">{% trans 'How It Works' %}</a></li>
+            <li><a href="{% url 'faq' %}">{% trans 'FAQs' %}</a></li>
+        </ul>
+    </div>
+</div> <!-- /container -->

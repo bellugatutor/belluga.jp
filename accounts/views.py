@@ -18,6 +18,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            messages.success(request, _('You have registered an account.'))
             return redirect('login')
     else:
         form = UserCreationForm()
@@ -32,13 +33,14 @@ def signup_tutor(request):
         form = TutorCreationForm(request.POST, request.FILES)
         if form.is_valid():
             user = form.save()
+            messages.success(request, _('You have registered an account.'))
             return redirect('login')
     else:
         form = TutorCreationForm()
     context = {
         'form': form,
     }
-    return render(request, 'signup.html', context)
+    return render(request, 'signup_tutor.html', context)
 
 
 def login(request):
@@ -68,3 +70,7 @@ def search_tutor(request):
         'tutors': User.get_tutors(),
     }
     return render(request, 'tutor_search.html', context)
+
+
+def faq(request):
+    return render(request, 'faq.html')
