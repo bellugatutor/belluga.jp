@@ -47,7 +47,7 @@
                     <a href="#" class="btn btn-info btn-block">{% trans 'Request a Lesson' %}</a>
                 </div>
                 <div style="margin-left:115px;margin-right:200px">
-                    <p><a href="#" style="text-decoration:underline">{{ tutor }}</a></p>
+                    <p><a href="{% url 'tutor_detail' tutor.id %}" style="text-decoration:underline">{{ tutor }}</a></p>
                     <p>{{ tutor.nationality }}</p>
                     <p>{{ tutor.intro_text }}</p>
                 </div>

@@ -135,3 +135,15 @@
 	background:url(../images/star.png) -1px 0 no-repeat;
 	display:inline-block;
 }
+.tutor-detail-header {
+	border-bottom:1px solid #D9D9D9;
+	padding-bottom:15px;
+}
+.tutor-detail-reviews {
+	border-bottom:1px solid #D9D9D9;
+	padding-bottom:15px;
+}
+.tutor-detail-places {
+	border-bottom:1px solid #D9D9D9;
+	padding-bottom:15px;
+}

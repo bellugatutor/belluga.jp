@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+{% load widget_tweaks %}
+{% load thumbnail %}
+
+{% block content %}
+<div class="container" style="margin-top:30px">
+<div class="row">
+    <div class="col-md-2 col-sm-3 col-xs-12">
+        <p class="text-center"><img src="{% if tutor.photo %}{% thumbnail tutor.photo 100x100 crop='smart' %}{% else %}{% static 'images/avatar.jpg' %}{% endif %}" /></p>
+        <p class="text-center">Show profile in the following langauge</p>
+        <p class="text-center"><a href="#" class="btn btn-info">{% trans 'English' %}</a></p>
+    </div>
+    <div class="col-md-10 col-sm-9 col-xs-12">
+
+        <div class="tutor-detail-header clearfix">
+            <div class="pull-right" style="width:185px">
+                <div class="hourly-rate text-right">{{ tutor.hourly_rate }} JPY</div>
+                <div class="tutor-lessons text-right">{{ tutor.get_sessions|length }} {% trans 'Lessons' %}</div>
+                <div class="tutor-reviews text-right clearfix">
+                    {% for i in tutor.get_stars %}
+                        <i class="star pull-left"></i>
+                    {% endfor %}
+                    <a href="#" style="text-decoration:underline">{{ tutor.get_reviews|length }} {% trans 'Reviews' %}</a>
+                </div>
+                <a href="#" class="btn btn-info btn-block">{% trans 'Request a Lesson' %}</a>
+            </div>
+            <div style="margin-right:200px">
+                <h4><a href="{% url 'tutor_detail' tutor.id %}" style="text-decoration:underline">{{ tutor }}</a></h4>
+                <p>{{ tutor.nationality }}</p>
+                <p>{{ tutor.intro_text2 }}</p>
+            </div>
+        </div> <!-- .tutor-detail-header -->
+        
+        <div class="tutor-detail-reviews row">
+            <div class="col-sm-5 col-xs-12">
+                <h4>{% trans 'Reviews' %}</h4>
+                <div class="tutor-reviews text-right clearfix">
+                    {% for i in tutor.get_stars %}
+                        <i class="star pull-left"></i>
+                    {% endfor %}
+                    <a href="#" style="text-decoration:underline">{% trans 'Read' %} {{ tutor.get_reviews|length }} {% trans 'Reviews' %}</a>
+                </div>
+                <p>{{ tutor.get_stars|length }} {% trans 'stars out of 5' %}</p>
+                <p><strong>{% trans 'Most Frequent Feedback' %}</strong></p>
+                <p><a href="javascript:;" class="btn btn-info btn-block">Polite (167)</a></p>
+                <p><a href="javascript:;" class="btn btn-info btn-block">Each to Talk to (154)</a></p>
+                <p><a href="javascript:;" class="btn btn-info btn-block">Good for Beginners (121)</a></p>
+                <p><a href="javascript:;" class="btn btn-info btn-block">Professional (91)</a></p>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <h4>{% trans "Watch the Tutor's video" %}</h4>
+                <div id="video-player">{% trans 'No video' %}</div>
+            </div>
+        </div> <!-- .tutor-detail-reviews -->
+        
+        <div class="tutor-detail-places">
+            <h4>{% trans 'Place for the Lesson' %}</h4>
+            <p>{% trans 'Please find below a list of cafes your tutor has chosen.' %}</p>
+            <ul class="nav nav-tabs nav-stacked" role="tablist" style="border-bottom:none">
+                <li class="active"><a href="#tab1" role="tab" data-toggle="tab">Tokyo</a></li>
+                <li><a href="#tab2" role="tab" data-toggle="tab">Shibuya</a></li>
+                <li><a href="#tab3" role="tab" data-toggle="tab">Shinjuku</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    
+                </div>
+                <div class="tab-pane" id="tab2"></div>
+                <div class="tab-pane" id="tab3"></div>
+            </div>
+        </div> <!-- .tutor-detail-places --> 
+        
+        <div class="tutor-detail-schedule">
+            aa
+        </div> <!-- .tutor-detail-schedule -->
+        
+        <div>
+            <button class="btn btn-info">{% trans 'Request a Lesson' %}</button>
+        </div>
+    </div> <!-- .right side -->
+</div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+    {% if tutor.intro_video %}
+    <script src="{% static 'jwplayer/jwplayer.js' %}"></script>
+    <script>
+    jwplayer('video-player').setup({
+        file: "{{ tutor.intro_video.url }}",
+        image: ""
+    });
+    </script>
+    {% endif %}
+{% endblock %}

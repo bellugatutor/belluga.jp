@@ -74,7 +74,9 @@ class User(AbstractUser):
         return []
 
     def get_stars(self):
-        return range(random.randint(1,5))
+        if not hasattr(self, 'stars'):
+            self.stars = random.randint(1, 5)
+        return range(self.stars)
 
 
 class Time(models.Model):

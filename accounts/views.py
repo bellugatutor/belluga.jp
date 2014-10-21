@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
@@ -71,6 +71,13 @@ def search_tutor(request):
     }
     return render(request, 'tutor_search.html', context)
 
+
+def tutor_detail(request, id):
+    tutor = get_object_or_404(User.get_tutors(), id=id)
+    context = {
+        'tutor': tutor,
+    }
+    return render(request, 'tutor_detail.html', context)
 
 def faq(request):
     return render(request, 'faq.html')

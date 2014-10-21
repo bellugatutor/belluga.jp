@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^login/$', 'accounts.views.login', name='login'),
     url(r'^logout/$', 'accounts.views.logout', name='logout'),
     url(r'^search/tutor/$', 'accounts.views.search_tutor', name='search_tutor'),
+    url(r'^tutor/(\d+)/$', 'accounts.views.tutor_detail', name='tutor_detail'),
     url(r'^faq/$', 'accounts.views.faq', name='faq'),
 
     url(r'^howitwork/students/$', TemplateView.as_view(template_name='howitwork/students.html'), name='howitwork_students'),
