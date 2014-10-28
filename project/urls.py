@@ -1,9 +1,10 @@
 from django.conf.urls import patterns, include, url
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.conf import settings
 
-urlpatterns = patterns('',
+urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'accounts.views.home', name='home'),
     url(r'^signup/$', 'accounts.views.signup', name='signup'),
@@ -16,6 +17,9 @@ urlpatterns = patterns('',
 
     url(r'^howitwork/students/$', TemplateView.as_view(template_name='howitwork/students.html'), name='howitwork_students'),
     url(r'^howitwork/tutors/$', TemplateView.as_view(template_name='howitwork/tutors.html'), name='howitwork_tutors'),
+)
 
+urlpatterns += patterns('',
+    url(r'^setlang/$', 'django.views.i18n.set_language', name='set_language'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )

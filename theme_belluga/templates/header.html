@@ -4,11 +4,24 @@
 <div class="container">
     <div class="clearfix">
         <div class="pull-left">
-            <a href="/" class="logo"></a>
+            <a href="{% url 'home' %}" class="logo"></a>
         </div>
         <div class="pull-right">
+            <form method="post" action="{% url 'set_language' %}"> {% csrf_token %}
+            {% get_available_languages as languages %}
+            {% trans 'Language' %}:
+            {% for lang_code, lang_name in languages %}
+                {% language lang_code %}
+                <label class="btn btn-default btn-xs">{% trans lang_name %}
+                    <input type="submit" value="{{ lang_code }}" name="language" class="hidden" />
+                </label>
+                {% endlanguage %}
+            {% endfor %}
+            <input type="hidden" name="next" value="/" />
             <img src="{% static 'images/phone.png' %}" />
-            <br/>
+            </form>
+        </div>
+        <div class="pull-right" style="clear:right">
             {% if user.is_authenticated %}
                 {% trans 'Welcome,' %} {{ user }}. 
                 <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
@@ -25,7 +38,7 @@
         </ul>
 
         <ul class="main-nav nav nav-pills pull-left">
-            <li class="rb1"><a href="/">{% trans 'Home' %}</a></li>
+            <li class="rb1"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
             <li class="rb1"><a href="{% url 'search_tutor' %}">{% trans 'Look for a Tutor' %}</a></li>
             <li class="rb1"><a href="{% url 'signup_tutor' %}">{% trans 'Become a Tutor' %}</a></li>
             <li class="rb1"><a href="{% url 'howitwork_students' %}">{% trans 'How It Works' %}</a></li>

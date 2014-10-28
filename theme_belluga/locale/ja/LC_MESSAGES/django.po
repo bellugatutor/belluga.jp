@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-27 08:54+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\templates\header.html:12
+msgid "Language"
+msgstr "言語"
+
+#: .\templates\header.html:26
+msgid "Welcome,"
+msgstr "歓迎する, "
+
+#: .\templates\header.html:27
+msgid "Logout"
+msgstr "ログアウト"
+
+#: .\templates\header.html:41
+msgid "Home"
+msgstr "ホーム"
+
+#: .\templates\header.html:42
+msgid "Look for a Tutor"
+msgstr "先生をさがそう"
+
+#: .\templates\header.html:43
+msgid "Become a Tutor"
+msgstr "先生になろう"
+
+#: .\templates\header.html:44
+msgid "How It Works"
+msgstr "ご利用の流れ"
+
+#: .\templates\header.html:45
+msgid "FAQs"
+msgstr "よくある質問"
+
+#: .\templates\home.html:11 .\templates\home.html.py:37
+#: .\templates\tutor_search.html:12
+msgid "Search for a Tutor"
+msgstr "先生を検索"
+
+#: .\templates\home.html:14 .\templates\tutor_detail.html:12
+#: .\templates\tutor_search.html:15
+msgid "English"
+msgstr "英語"
+
+#: .\templates\home.html:15 .\templates\tutor_search.html:16
+msgid "Chinese"
+msgstr "中国語"
+
+#: .\templates\home.html:16 .\templates\tutor_search.html:17
+msgid "Korean"
+msgstr "韓国語"
+
+#: .\templates\home.html:19 .\templates\tutor_search.html:20
+msgid "Tokyo"
+msgstr "東京都"
+
+#: .\templates\home.html:22 .\templates\tutor_search.html:23
+msgid "Roppongi"
+msgstr "六本木"
+
+#: .\templates\home.html:24 .\templates\tutor_search.html:25
+msgid "Search"
+msgstr "検索"
+
+#: .\templates\home.html:38
+msgid ""
+"Look for a tutor who matches your needs. You can filter by nationality, "
+"language, and rating."
+msgstr ""
+"自分にピッタリな先生を探しましょう。出身国・口コミ評価からも探すことができま"
+"す。"
+
+#: .\templates\home.html:41
+msgid "Lesson at a café Near You"
+msgstr "お近くのスタバでレッスン"
+
+#: .\templates\home.html:42
+msgid ""
+"You do your lesson at a Starbacks  you chose. Because it is a Starbucks, "
+"there is  no need to worry even if you are meeting a new tutor. The payment "
+"will take place before each lesson, so no need to take your cash out."
+msgstr ""
+"承認された場所で、先生とレッスンを行います。場所はスタバなので、初めての先生"
+"でも安心。支払いは、レッスンごとに自動で行われるので、現金を手渡す必要もあり"
+"ません。"
+
+#: .\templates\home.html:47
+msgid "Reserve a Lesson"
+msgstr "レッスン予約"
+
+#: .\templates\home.html:48
+msgid ""
+"Once you find your favorite tutor, you can choose the place and schedule, "
+"and make a request for a lesson. The lesson is confirmed when you receive a "
+"confirmation from the tutor within 24 hours."
+msgstr ""
+"気に入った先生がみつかったら、スケジュールと場所を選択、レッスンの申請を行い"
+"ます。２４時間以内に先生から承認が来て、確定です。"
+
+#: .\templates\home.html:51
+msgid "After the Lesson"
+msgstr "レッスンが終わったら"
+
+#: .\templates\home.html:52
+msgid ""
+"We ask you to give feedback to your tutor. At times your tutor may send you "
+"feedback or material to review after the lesson."
+msgstr ""
+"先生への口コミ評価をお願いしています。講師からもレッスン内容のフィードバック"
+"や復習内容が届くことがあります。"
+
+#: .\templates\login.html:10 .\templates\signup.html:87
+#: .\templates\signup_tutor.html:153
+msgid "Register"
+msgstr "新規登録"
+
+#: .\templates\login.html:11
+msgid ""
+"If you haven’t registered yet, please register below and get started. It's "
+"free."
+msgstr ""
+"まだ登録なさっていない方、登録後、先生を選択して、さっそくレッスンを始めま"
+"しょう。"
+
+#: .\templates\login.html:12
+msgid "Register as a Student"
+msgstr "学生として登録"
+
+#: .\templates\login.html:13
+msgid "Register as a Tutor"
+msgstr "先生になろう"
+
+#: .\templates\login.html:18 .\templates\login.html.py:38
+msgid "Login"
+msgstr "ログイン"
+
+#: .\templates\login.html:19
+msgid "If you have an account, please login below."
+msgstr "すでに登録されている方は、以下からログインしてください。"
+
+#: .\templates\login.html:35
+msgid "Remember me"
+msgstr "次から自動ログイン"
+
+#: .\templates\signup.html:9
+msgid "Signup"
+msgstr "新規登録"
+
+#: .\templates\signup.html:10 .\templates\signup_tutor.html:10
+msgid "Please complete the below form."
+msgstr "下記のフォームに記入してください。"
+
+#: .\templates\signup.html:60 .\templates\signup_tutor.html:125
+msgid "Please choose your payment option from below."
+msgstr "お支払方法を以下からお選びください。"
+
+#: .\templates\signup_tutor.html:9
+msgid "Signup as a Tutor"
+msgstr "先生になろう"
+
+#: .\templates\tutor_detail.html:19 .\templates\tutor_search.html:40
+msgid "Lessons"
+msgstr "レッスン"
+
+#: .\templates\tutor_detail.html:24 .\templates\tutor_detail.html.py:37
+#: .\templates\tutor_detail.html:42 .\templates\tutor_search.html:45
+msgid "Reviews"
+msgstr "レビュー"
+
+#: .\templates\tutor_detail.html:26 .\templates\tutor_detail.html.py:79
+#: .\templates\tutor_search.html:47
+msgid "Request a Lesson"
+msgstr "レッスンを申し込む"
+
+#: .\templates\tutor_detail.html:44
+msgid "stars out of 5"
+msgstr "5つ星のうち"
+
+#: .\templates\tutor_detail.html:45
+msgid "Most Frequent Feedback"
+msgstr "特に多かった口コミ"
+
+#: .\templates\tutor_detail.html:52
+msgid "Watch the Tutor's video"
+msgstr "先生の自己紹介を見る"
+
+#: .\templates\tutor_detail.html:53
+msgid "No video"
+msgstr "いいえビデオません"
+
+#: .\templates\tutor_detail.html:58
+msgid "Place for the Lesson"
+msgstr "場所"
+
+#: .\templates\tutor_detail.html:59
+msgid "Please find below a list of cafes your tutor has chosen."
+msgstr "先生が指定した以下の時間・場所から、お選びいただけます。"
+
+#: .\templates\tutor_search.html:31
+msgid "tutors have been found"
+msgstr "人の先生が見つかりました"

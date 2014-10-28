@@ -3,3 +3,4 @@ Thumbs.db
 *.pyc
 accounts/static/media
 local_settings.py
+/static/

@@ -19,6 +19,7 @@ LANGUAGE_CHOICES = (
     ('English', _('English')),  # business conversation
     ('Chinese', _('Chinese')),
     ('Korean', _('Korean')),
+    ('German', _('German')),
 )
 
 HOURLY_RATE_CHOICES = [(i, str(i)+' JPY') for i in range(2000, 8500, 500)]

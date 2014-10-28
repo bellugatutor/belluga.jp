@@ -39,7 +39,7 @@
                     {% for i in tutor.get_stars %}
                         <i class="star pull-left"></i>
                     {% endfor %}
-                    <a href="#" style="text-decoration:underline">{% trans 'Read' %} {{ tutor.get_reviews|length }} {% trans 'Reviews' %}</a>
+                    <a href="#" style="text-decoration:underline">{{ tutor.get_reviews|length }} {% trans 'Reviews' %}</a>
                 </div>
                 <p>{{ tutor.get_stars|length }} {% trans 'stars out of 5' %}</p>
                 <p><strong>{% trans 'Most Frequent Feedback' %}</strong></p>
