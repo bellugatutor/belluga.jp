@@ -64,3 +64,10 @@ class TutorCreationForm(UserCreationForm):
         self.fields['intro_text2'].required = True
         self.fields['language'].required = True
         self.fields['hourly_rate'].required = True
+
+
+class TutorSearchForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ('language', 'prefecture', 'area')

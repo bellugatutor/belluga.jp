@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 08:54+0800\n"
+"POT-Creation-Date: 2014-10-31 10:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,13 +36,13 @@ msgstr "ホーム"
 
 #: .\templates\header.html:42
 msgid "Look for a Tutor"
-msgstr "先生をさがそう"
+msgstr "先生を探そう"
 
 #: .\templates\header.html:43
 msgid "Become a Tutor"
 msgstr "先生になろう"
 
-#: .\templates\header.html:44
+#: .\templates\header.html:44 .\templates\home.html:77
 msgid "How It Works"
 msgstr "ご利用の流れ"
 
@@ -50,37 +50,99 @@ msgstr "ご利用の流れ"
 msgid "FAQs"
 msgstr "よくある質問"
 
-#: .\templates\home.html:11 .\templates\home.html.py:37
+#: .\templates\home.html:12 .\templates\home.html.py:118
 #: .\templates\tutor_search.html:12
 msgid "Search for a Tutor"
 msgstr "先生を検索"
 
-#: .\templates\home.html:14 .\templates\tutor_detail.html:12
-#: .\templates\tutor_search.html:15
-msgid "English"
-msgstr "英語"
-
-#: .\templates\home.html:15 .\templates\tutor_search.html:16
-msgid "Chinese"
-msgstr "中国語"
-
-#: .\templates\home.html:16 .\templates\tutor_search.html:17
-msgid "Korean"
-msgstr "韓国語"
-
-#: .\templates\home.html:19 .\templates\tutor_search.html:20
-msgid "Tokyo"
-msgstr "東京都"
-
-#: .\templates\home.html:22 .\templates\tutor_search.html:23
-msgid "Roppongi"
-msgstr "六本木"
-
-#: .\templates\home.html:24 .\templates\tutor_search.html:25
+#: .\templates\home.html:33 .\templates\tutor_search.html:25
 msgid "Search"
 msgstr "検索"
 
-#: .\templates\home.html:38
+#: .\templates\home.html:40
+msgid "Learn a Foreign Language at a Café Nearby!"
+msgstr "お近くのカフェで、外国語を学ぼう！"
+
+#: .\templates\home.html:44
+msgid "Inexpensive"
+msgstr "安い"
+
+#: .\templates\home.html:46
+msgid "Pay-per-Lesson (No Additional Fee)"
+msgstr "レッスン費用以外無料（入会費などなし）"
+
+#: .\templates\home.html:47
+msgid "You Can Start From Just One Lesson"
+msgstr "1レッスンから始められます"
+
+#: .\templates\home.html:54
+msgid "Easy"
+msgstr "簡単"
+
+#: .\templates\home.html:56
+msgid "Reservation Takes Place Online"
+msgstr "予約は全てサイトで完了"
+
+#: .\templates\home.html:57
+msgid "Simply Choose a Tutor, a Time, and a Cafe"
+msgstr "先生・日時・カフェ（対面）をクリックするだけ"
+
+#: .\templates\home.html:64
+msgid "Safe"
+msgstr "安心"
+
+#: .\templates\home.html:66
+msgid "Tutor’s Profile and Reviews Available"
+msgstr "レビューも含め充実した先生のプロフィール"
+
+#: .\templates\home.html:67
+msgid "Facebook/LinkedIn Login Required"
+msgstr "Facebook/LinkedInアカウントによる本人登録"
+
+#: .\templates\home.html:81
+msgid "Choose Your Tutor"
+msgstr "好きな先生を選ぶ"
+
+#: .\templates\home.html:82
+msgid ""
+"Choose a tutor who best fits your needs. You can refer to the tutor’s "
+"introduction, education background, reviews, and price."
+msgstr "自分にピッタリな先生を探しましょう。先生の自己紹介、履歴、レビュー、価格などを参考にして、ご自分にぴったりの先生を選ぶことができます。"
+
+#: .\templates\home.html:87
+msgid "Choose a Time and Location"
+msgstr "好きな日時・カフェを選ぶ"
+
+#: .\templates\home.html:88
+msgid ""
+"Choose a time and location. The reservation takes place on line, so no need "
+"for emailing anyone.  The Pay-per-lesson system and no additional fees."
+msgstr "先生を選んだら、好きな日時とカフェを選びます。予約は全てサイト上で行われるので、先生とメールのやりとりする必要なし。支払いもレッスン単位で、入会金など一切ありません。"
+
+#: .\templates\home.html:93
+msgid "Lesson at a Café or via Skype"
+msgstr "カフェ・スカイプでレッスン"
+
+#: .\templates\home.html:94
+msgid ""
+"Your lesson is confirmed once your tutor responds within 24 hours. You can "
+"show up at the café and enjoy the lesson. With Skype-based tutoring, the "
+"lesson can take place at home."
+msgstr "先生から24時間以内に承認がきてレッスン確定です。あとは指定したカフェに行って、あなたに最適なマンツーマン・レッスンを楽しんでください。スカイプの場合は、ご自宅からレッスンが楽しめます。"
+
+#: .\templates\home.html:100
+msgid "Features"
+msgstr "特集"
+
+#: .\templates\home.html:104
+msgid "Skype Lesson with Harvard Students and Graduates"
+msgstr "ハーバード大学・卒業生とSkypeでレッスン"
+
+#: .\templates\home.html:109
+msgid "In-Person Café Lesson with YouTube Celebrities"
+msgstr "YouTubeで有名な先生とカフェでレッスン"
+
+#: .\templates\home.html:119
 msgid ""
 "Look for a tutor who matches your needs. You can filter by nationality, "
 "language, and rating."
@@ -88,11 +150,11 @@ msgstr ""
 "自分にピッタリな先生を探しましょう。出身国・口コミ評価からも探すことができま"
 "す。"
 
-#: .\templates\home.html:41
+#: .\templates\home.html:122
 msgid "Lesson at a café Near You"
 msgstr "お近くのスタバでレッスン"
 
-#: .\templates\home.html:42
+#: .\templates\home.html:123
 msgid ""
 "You do your lesson at a Starbacks  you chose. Because it is a Starbucks, "
 "there is  no need to worry even if you are meeting a new tutor. The payment "
@@ -102,11 +164,11 @@ msgstr ""
 "でも安心。支払いは、レッスンごとに自動で行われるので、現金を手渡す必要もあり"
 "ません。"
 
-#: .\templates\home.html:47
+#: .\templates\home.html:128
 msgid "Reserve a Lesson"
 msgstr "レッスン予約"
 
-#: .\templates\home.html:48
+#: .\templates\home.html:129
 msgid ""
 "Once you find your favorite tutor, you can choose the place and schedule, "
 "and make a request for a lesson. The lesson is confirmed when you receive a "
@@ -115,11 +177,11 @@ msgstr ""
 "気に入った先生がみつかったら、スケジュールと場所を選択、レッスンの申請を行い"
 "ます。２４時間以内に先生から承認が来て、確定です。"
 
-#: .\templates\home.html:51
+#: .\templates\home.html:132
 msgid "After the Lesson"
 msgstr "レッスンが終わったら"
 
-#: .\templates\home.html:52
+#: .\templates\home.html:133
 msgid ""
 "We ask you to give feedback to your tutor. At times your tutor may send you "
 "feedback or material to review after the lesson."
@@ -176,6 +238,10 @@ msgstr "お支払方法を以下からお選びください。"
 msgid "Signup as a Tutor"
 msgstr "先生になろう"
 
+#: .\templates\tutor_detail.html:12 .\templates\tutor_search.html:15
+msgid "English"
+msgstr "英語"
+
 #: .\templates\tutor_detail.html:19 .\templates\tutor_search.html:40
 msgid "Lessons"
 msgstr "レッスン"
@@ -213,6 +279,22 @@ msgstr "場所"
 #: .\templates\tutor_detail.html:59
 msgid "Please find below a list of cafes your tutor has chosen."
 msgstr "先生が指定した以下の時間・場所から、お選びいただけます。"
+
+#: .\templates\tutor_search.html:16
+msgid "Chinese"
+msgstr "中国語"
+
+#: .\templates\tutor_search.html:17
+msgid "Korean"
+msgstr "韓国語"
+
+#: .\templates\tutor_search.html:20
+msgid "Tokyo"
+msgstr "東京都"
+
+#: .\templates\tutor_search.html:23
+msgid "Roppongi"
+msgstr "六本木"
 
 #: .\templates\tutor_search.html:31
 msgid "tutors have been found"

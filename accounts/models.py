@@ -1,3 +1,4 @@
+#coding=utf-8
 import random
 from django.db import models
 from django.contrib.auth.models import AbstractUser
@@ -23,6 +24,20 @@ LANGUAGE_CHOICES = (
 )
 
 HOURLY_RATE_CHOICES = [(i, str(i)+' JPY') for i in range(2000, 8500, 500)]
+
+PREFECTURE_CHOICES = (
+    ('Tokyo', _('Tokyo')),
+    ('Kanagawa', _('Kanagawa')),
+    ('Chiba', _('Chiba')),
+    ('Saitama', _('Saitama')),
+    ('Osaka', _('Osaka')),
+    ('Kyoto', _('Kyoto')),
+    ('Hyogo', _('Hyogo')),
+)
+
+AREA_CHOICES = (
+    ('Shibuya/Shinjuku', _('Shibuya/Shinjuku')),
+)
 
 
 class User(AbstractUser):
@@ -51,6 +66,8 @@ class User(AbstractUser):
     # Tutoring Preferences
     language = models.CharField(_('which language'), max_length=40, choices=LANGUAGE_CHOICES, default='English')
     hourly_rate = models.PositiveIntegerField(_('hourly rate'), choices=HOURLY_RATE_CHOICES, default=2000)
+    prefecture = models.CharField(_('prefecture'), max_length=100, choices=PREFECTURE_CHOICES, default='Tokyo')
+    area = models.CharField(_('area'), max_length=100, choices=AREA_CHOICES, default='Shibuya/Shinjuku')
 
     def __unicode__(self):
         if self.first_name:

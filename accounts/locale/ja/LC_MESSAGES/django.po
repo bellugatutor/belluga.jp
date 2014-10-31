@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 08:55+0800\n"
+"POT-Creation-Date: 2014-10-29 11:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,126 +38,170 @@ msgstr ""
 msgid "Important dates"
 msgstr ""
 
-#: .\models.py:7
+#: .\models.py:8
 msgid "JCB"
 msgstr ""
 
-#: .\models.py:8
+#: .\models.py:9
 msgid "MasterCard"
 msgstr ""
 
-#: .\models.py:9
+#: .\models.py:10
 msgid "VISA"
 msgstr ""
 
-#: .\models.py:13
+#: .\models.py:14
 msgid "Yes"
 msgstr ""
 
-#: .\models.py:14
+#: .\models.py:15
 msgid "A little"
 msgstr ""
 
-#: .\models.py:15
+#: .\models.py:16
 msgid "No"
 msgstr ""
 
-#: .\models.py:19
+#: .\models.py:20
 msgid "English"
 msgstr "英語"
 
-#: .\models.py:20
+#: .\models.py:21
 msgid "Chinese"
 msgstr "中国語"
 
-#: .\models.py:21
+#: .\models.py:22
 msgid "Korean"
 msgstr "韓国語"
 
-#: .\models.py:22
+#: .\models.py:23
 msgid "German"
 msgstr "ドイツ語"
 
+#: .\models.py:29
+msgid "Tokyo"
+msgstr "東京都"
+
+#: .\models.py:30
+msgid "Kanagawa"
+msgstr "神奈川県"
+
+#: .\models.py:31
+msgid "Chiba"
+msgstr "千葉県"
+
+#: .\models.py:32
+msgid "Saitama"
+msgstr "埼玉県"
+
+#: .\models.py:33
+msgid "Osaka"
+msgstr "大阪府"
+
 #: .\models.py:34
+msgid "Kyoto"
+msgstr "京都府"
+
+#: .\models.py:35
+msgid "Hyogo"
+msgstr "兵庫県"
+
+#: .\models.py:39
+msgid "Shibuya/Shinjuku"
+msgstr "渋谷・新宿"
+
+#: .\models.py:49
 msgid "phone number"
 msgstr ""
 
-#: .\models.py:37
+#: .\models.py:52
 msgid "credit card type"
 msgstr "カード種類"
 
-#: .\models.py:38
+#: .\models.py:53
 msgid "credit card number"
 msgstr "番号"
 
-#: .\models.py:39
+#: .\models.py:54
 msgid "name with card"
 msgstr "氏名"
 
-#: .\models.py:40
+#: .\models.py:55
 msgid "expiration date"
 msgstr "有効期限"
 
-#: .\models.py:43
+#: .\models.py:58
 msgid "is tutor"
 msgstr ""
 
-#: .\models.py:44
+#: .\models.py:59
 msgid "nationality"
 msgstr "国籍"
 
-#: .\models.py:45
+#: .\models.py:60
 msgid "speak Japanese"
 msgstr "日本語レベル*"
 
-#: .\models.py:46
+#: .\models.py:61
 msgid "profile picture"
 msgstr "プロフィールの写真"
 
-#: .\models.py:47
+#: .\models.py:62
 msgid "profile(200 words or less)"
 msgstr "プロフィール（200字以内）"
 
-#: .\models.py:47
+#: .\models.py:62
 msgid "It will show up on the search page."
 msgstr "300字以内、英語または日本語でお願いします。検索ページに掲載されます。"
 
-#: .\models.py:48
+#: .\models.py:63
 msgid "profile(1000 words or less)"
 msgstr "プロフィール（1,000字以内）"
 
-#: .\models.py:48
+#: .\models.py:63
 msgid "It will show up on your profile page."
-msgstr "1,000字以内、英語または日本語でお願いします。あなたのマイページに掲載されます。"
+msgstr ""
+"1,000字以内、英語または日本語でお願いします。あなたのマイページに掲載されま"
+"す。"
 
-#: .\models.py:49
+#: .\models.py:64
 msgid "introductory video"
 msgstr ""
 
-#: .\models.py:52
+#: .\models.py:67
 msgid "which language"
 msgstr "教える言語"
 
-#: .\models.py:53 .\models.py:104
+#: .\models.py:68 .\models.py:121
 msgid "hourly rate"
 msgstr "設定金額"
 
-#: .\models.py:87 .\models.py:100
+#: .\models.py:69
+#, fuzzy
+#| msgid "profile picture"
+msgid "prefecture"
+msgstr "プロフィールの写真"
+
+#: .\models.py:70
+msgid "area"
+msgstr ""
+
+#: .\models.py:104 .\models.py:117
 msgid "time"
 msgstr ""
 
-#: .\models.py:93 .\models.py:101
+#: .\models.py:110 .\models.py:118
 msgid "location name"
 msgstr ""
 
-#: .\views.py:21 .\views.py:36
+#: .\views.py:24 .\views.py:39
 msgid "You have registered an account."
 msgstr "あなたがアカウントを登録している。"
 
-#: .\views.py:51
+#: .\views.py:54
 msgid "You have logged in."
 msgstr "あなたがログインしている。"
 
-#: .\views.py:64
+#: .\views.py:67
 msgid "You have logged out."
 msgstr "あなたがログアウトしています。"

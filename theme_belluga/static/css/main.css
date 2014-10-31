@@ -11,6 +11,9 @@
 	display:block;
 	background:url(../images/login_register.png) 0 0 no-repeat;
 }
+.login_register.ja {
+	background:url(../images/login_register_ja.png) 0 0 no-repeat;
+}
 .main-nav {
 	height:84px;
 	padding:10px 0;
@@ -84,6 +87,47 @@
 }
 .banner-icon.after {
 	background-image:url(../images/banner/after.png);
+}
+
+.banner-desc {
+	background-color:#fff;
+	opacity:0.9;
+	padding:10px;
+	margin-top:30px
+}
+.banner-desc ul {
+	padding-left:0;
+	margin-bottom:0;
+}
+.banner-desc ul li {
+	list-style-position:inside;
+}
+.banner-pig {
+	background:url(../images/banner/pig.png) 0 0 no-repeat;
+	width:64px;height:64px;
+	margin:10px auto;
+}
+.banner-pig.easy {
+	background-image:url(../images/banner/easy.png);
+}
+.banner-pig.safe {
+	background-image:url(../images/banner/safe.png);
+}
+.banner-search {
+	background:url(../images/banner/search2.png) 0 0 no-repeat;
+	width:83px;height:85px;
+	margin:0 auto;
+}
+.banner-search.reserve {
+	background-image:url(../images/banner/reserve2.png);
+}
+.banner-search.cafe {
+	background-image:url(../images/banner/cafe2.png);
+}
+.banner-arrow {
+	float:right;
+	background:url(../images/banner/arrow.png);
+	width:34px;height:183px;
 }
 
 .errorlist {

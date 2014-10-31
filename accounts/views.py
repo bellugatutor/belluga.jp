@@ -5,12 +5,15 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext_lazy as _
-from .forms import UserCreationForm, LoginForm, TutorCreationForm
+from .forms import UserCreationForm, LoginForm, TutorCreationForm, TutorSearchForm
 from .models import User
 
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'form': TutorSearchForm(),
+    }
+    return render(request, 'home.html', context)
 
 
 def signup(request):

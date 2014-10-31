@@ -26,15 +26,15 @@
                 {% trans 'Welcome,' %} {{ user }}. 
                 <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
             {% else %}
-                <a href="{% url 'login' %}" class="login_register"></a>
+                <a href="{% url 'login' %}" class="login_register {{ LANGUAGE_CODE }}"></a>
             {% endif %}
         </div>
     </div>
     <div class="clearfix" style="margin-top:10px">
         <ul class="nav nav-pills pull-right top-numbers">
-            <li><a href="#" class="registered students {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_students }}</a></li>
-            <li><a href="#" class="registered tutors {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_tutors }}</a></li>
-            <li><a href="#" class="registered lessons {% if LANGUAGE_CODE == 'ja' %}ja{% endif %}">{{ total_lessons }}</a></li>
+            <li><a href="#" class="registered students {{ LANGUAGE_CODE }}">{{ total_students }}</a></li>
+            <li><a href="#" class="registered tutors {{ LANGUAGE_CODE }}">{{ total_tutors }}</a></li>
+            <li><a href="#" class="registered lessons {{ LANGUAGE_CODE }}">{{ total_lessons }}</a></li>
         </ul>
 
         <ul class="main-nav nav nav-pills pull-left">
